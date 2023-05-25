@@ -1,8 +1,8 @@
 class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
         commonPrefix = ""
-        strs = sorted(strs)
-        firstWord = strs[0]
+        strs = sorted(strs)   
+        firstWord = strs[0]   
         lastWord = strs[-1]
 
         for i in range(min(len(firstWord), len(lastWord))):
