@@ -3,6 +3,6 @@ class Solution:
         ans=0
         for i in range(len(nums)-1):
             for j in range(i+1,len(nums)):
-                if j>i and nums[i]==nums[j]:
+                if nums[i]==nums[j]:
                     ans+=1
         return ans
