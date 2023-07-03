@@ -1,10 +1,9 @@
 class Solution:
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+        cnt = [0]*(max(nums)+1)
         ans = []
         for i in nums:
-            num = 0
-            for j in nums:
-                if j!=i and i>j:
-                    num +=1
-            ans.append(num)
+            cnt[i]+=1
+        for i in nums:
+            ans.append(sum(cnt[:i]))
         return ans
