@@ -4,10 +4,14 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         n = len(nums)
-        for i in range(n-1):
-            for j in range(i,len(nums)):
-                if nums[i]>nums[j]:
-                    nums[i],nums[j] = nums[j], nums[i]
+        cnt = [0]*(max(nums)+1)
+        for i in nums:
+            cnt[i]+=1
+        for i in range(len(cnt)):
+            for j in range(cnt[i]):
+                nums.append(i)
+        for i in range(n):
+            nums.pop(0)
                 
         
         
