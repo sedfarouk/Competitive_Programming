@@ -34,10 +34,10 @@ class Solution:
                 return False
         for i in range(0,9,3):
             for j in range(0,9,3):
-                subgr = []
+                sub_grid = []
                 for k in board[i:i+3]:
-                    subgr.append(k[j:j+3])  
-                if self.check_3_by_3(subgr) is False:
+                    sub_grid.append(k[j:j+3])  
+                if self.check_3_by_3(sub_grid) is False:
                     return False
         return True    
         
