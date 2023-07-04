@@ -1,4 +1,4 @@
-# Leetcode 840 - Runtime 49 ms 92.16% Memory 16.3mb Beats 59.80%
+# Leetcode 840 
 
 def check_diagonals(matrix):
     n = int(len(matrix)/2)+1
