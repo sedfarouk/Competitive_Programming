@@ -1,7 +1,6 @@
 def solve():
     t = int(input())
-    arr = []
-    s = []
+    arr, s = [], []
     for j in range(t+1):
         arr.append(' '*2*(t-j))
     for j in range(t):
