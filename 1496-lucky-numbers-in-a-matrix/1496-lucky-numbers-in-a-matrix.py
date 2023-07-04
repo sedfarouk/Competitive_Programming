@@ -1,12 +1,14 @@
 class Solution:
     def luckyNumbers (self, matrix: List[List[int]]) -> List[int]:
-        ans = []
+        min_nums, max_nums, ans = [], [], []
         cols = list(map(list, zip(*matrix)))
         for i in range(len(matrix)):
-            r_set = min(set(matrix[i]))
+            min_nums.append(min(set(matrix[i])))
 
-            for j in range(len(matrix[0])):
-                c_set = max(set(cols[j]))
-                if r_set == c_set:
-                    ans.append(r_set)
+        for j in range(len(matrix[0])):
+            max_nums.append(max(set(cols[j])))
+        
+        for i in min_nums:
+            if i in max_nums:
+                ans.append(i)
         return ans
