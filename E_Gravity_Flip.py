@@ -1,7 +1,6 @@
 def solve():
     t = int(input())
-    lst = list(map(int, input().split()))
-    lst.sort()
+    lst = sorted(list(map(int, input().split())))
     return lst
 
 print(*(solve()))
