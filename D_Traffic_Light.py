@@ -3,29 +3,19 @@ def solve():
     traffic = input()
     n = int(n)
     traffic+=traffic
-    ans = []
+    ans = 0
     
     if ch=='g':
         return 0
     
-    ans = []
-    l=r=0
+    g_idx = 0
+    for i in range(len(traffic)-1,-1,-1):
+        if traffic[i]=='g':
+            g_idx = i
+        if traffic[i]==ch:
+            ans = max(ans, g_idx-i)
     
-    while r<n*2:
-        if traffic[l]!=ch:
-            l+=1
-            r+=1
-            continue
-        if traffic[l]==ch:
-            while r<n*2 and traffic[r]!="g":
-                ans.append(r-l+1)
-                r+=1
-            while r<n*2 and traffic[r]=="g":
-                r+=1
-            l=r
-        r+=1
-    
-    return max(ans)
+    return ans
     
 for _ in range(int(input())):
     print(solve())
