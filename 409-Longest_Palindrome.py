@@ -11,7 +11,6 @@ class Solution:
             else:
                 odds.append(i)
 
-        odds.sort(reverse=True)
         sum_evens = sum(evens)
 
         odds_sum = 0
