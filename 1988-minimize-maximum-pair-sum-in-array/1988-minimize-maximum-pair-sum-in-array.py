@@ -5,7 +5,8 @@ class Solution:
 
         left, right = 0, len(nums)-1
         while left < right:
-            ans = max(ans, nums[left]+nums[right])
+            curr = nums[left]+nums[right]
+            ans = max(ans, curr)
             left+=1
             right-=1
         return ans
