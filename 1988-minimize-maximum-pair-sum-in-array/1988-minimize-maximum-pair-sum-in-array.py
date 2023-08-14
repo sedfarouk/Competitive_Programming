@@ -3,6 +3,9 @@ class Solution:
         nums.sort()
         ans = float("-inf")
 
-        for i in range(len(nums)//2):
-            ans = max(ans, nums[i]+nums[len(nums)-1-i])
+        left, right = 0, len(nums)-1
+        while left < right:
+            ans = max(ans, nums[left]+nums[right])
+            left+=1
+            right-=1
         return ans
