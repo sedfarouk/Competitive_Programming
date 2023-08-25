@@ -8,7 +8,7 @@ class Solution:
         for i in t:
             t_letters[ord(i)-ord('a')] += 1
         
-        for i in range(len(s_letters)):
+        for i in range(26):
             s_letters[i] = abs(s_letters[i]-t_letters[i])
         
         return sum(s_letters)
