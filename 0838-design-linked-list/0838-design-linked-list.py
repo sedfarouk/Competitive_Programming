@@ -14,7 +14,7 @@ class MyLinkedList:
 
         if self.head==None:
             return -1
-            
+
         cnt = 0
         while tmp.next != None and cnt != index:
             tmp = tmp.next
@@ -53,43 +53,40 @@ class MyLinkedList:
         if index==0:
             newVal.next = self.head
             self.head = newVal
-            return 
+            return  
         
-        front = Node()
-        back = Node()
-        front = self.head
         cnt = 0
+        fast, slow = Node(), Node()
+        fast = self.head
 
-        while front != None and cnt != index:
-            back = front
-            front = front.next
+        while fast != None and cnt < index:
+            slow = fast
+            fast = fast.next
             cnt+=1
-
-        if cnt < index:
-            return
-
-        newVal.next = front  
-        back.next = newVal 
+        
+        newVal.next = fast
+        slow.next = newVal
 
 
     def deleteAtIndex(self, index: int) -> None:
         front = Node()
-        back = Node()
         front = self.head
         cnt = 0
 
         if index==0:
             self.head = front.next
-
-        while front.next != None and cnt != index:
-            back = front
+            return
+        
+        while front.next != None and cnt != index-1:
             front = front.next
             cnt+=1
         
-        if index > cnt:
+        if index > cnt+1:
             return
-
-        back.next = front.next
+        if front.next != None:
+            front.next = front.next.next
+        else:
+            front.next = None
 
 # test = MyLinkedList()
 # for i in range(10):
