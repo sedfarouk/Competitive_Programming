@@ -10,6 +10,7 @@ class Solution:
             if i not in unique:
                 return i
         return maxx+1
+
         
 
 
