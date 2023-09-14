@@ -17,6 +17,9 @@ class Solution:
                 right = mid - 1
             elif temp == 1:
                 left = mid + 1
-            elif temp == 0:
-                return mid            
+            else:
+                return mid 
+
+
+                
         
