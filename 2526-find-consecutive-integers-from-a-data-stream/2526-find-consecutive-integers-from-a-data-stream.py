@@ -1,32 +1,22 @@
 class DataStream:
 
     def __init__(self, value: int, k: int):
-        self.queue = deque()
-        self.maxx = k
-        self.val = value
-        self.bad = 0
+        self.value = value
+        self.k = k
+        self.stream = deque()
+        self.count = 0
                 
 
     def consec(self, num: int) -> bool:    
-        self.queue.append(num)
-        
-        if num != self.val:
-            self.bad = 1
-        
-        if len(self.queue) < self.maxx:
-            if self.bad > 0:
-                self.bad += 1
-            return False
-        
+        self.stream.appendleft(num)
+        if self.stream[0] == self.value:
+            self.count+=1
         else:
-            self.queue.popleft()
-            if self.bad==self.maxx:
-                self.bad = 0
-                return False
-            if self.bad > 0:
-                self.bad += 1
-                return False
+            self.count=0
+        
+        if self.count >= self.k:
             return True
+        return False
                         
        
 
