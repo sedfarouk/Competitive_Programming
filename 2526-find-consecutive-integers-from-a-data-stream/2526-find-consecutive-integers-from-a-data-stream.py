@@ -9,10 +9,14 @@ class DataStream:
 
     def consec(self, num: int) -> bool:    
         self.stream.appendleft(num)
+        
         if self.stream[0] == self.value:
             self.count+=1
         else:
             self.count=0
+        
+        if len(self.stream)==self.k:
+            self.stream.pop()
         
         if self.count >= self.k:
             return True
