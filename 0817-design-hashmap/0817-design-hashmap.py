@@ -1,26 +1,29 @@
 class MyHashMap:
 
     def __init__(self):
-        self.MyHashMap = {}
-        
+        self.keys = []
+        self.values = []
 
     def put(self, key: int, value: int) -> None:
-        if key in self.MyHashMap:
-            self.MyHashMap[key] = value
+        if key not in self.keys:
+            self.keys.append(key)
+            self.values.append(value)
         else:
-            self.MyHashMap[key] = value
-        
+            idx = self.keys.index(key)
+            self.values[idx] = value
 
     def get(self, key: int) -> int:
-        if key in self.MyHashMap.keys():
-            return self.MyHashMap[key]
+        if key in self.keys:
+            idx = self.keys.index(key)
+            return self.values[idx]
         return -1
-        
 
     def remove(self, key: int) -> None:
-        if key in self.MyHashMap.keys():
-            del self.MyHashMap[key]
-        
+        if key in self.keys:
+            idx = self.keys.index(key)
+            del self.values[idx]
+            del self.keys[idx]
+
 
 
 # Your MyHashMap object will be instantiated and called as such:
