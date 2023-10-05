@@ -2,13 +2,13 @@ class Solution:
     def minDeletions(self, s: str) -> int:
         deletions = 0
         hashmap = Counter(s)
+        seen = set()
 
-        sorted_freqs = sorted(hashmap.values(), reverse=True)
-
-        for i in range(1, len(sorted_freqs)):
-            while sorted_freqs[i] >= sorted_freqs[i-1] and sorted_freqs[i] != 0:
-                sorted_freqs[i] -= 1
+        for key, freq in hashmap.items():
+            while freq > 0  and freq in seen:
+                freq -= 1
                 deletions += 1
+            seen.add(freq)
         
         return deletions
         
