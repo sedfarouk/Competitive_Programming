@@ -3,7 +3,6 @@ class Solution:
         ans = 0
 
         for sentence in sentences:
-            line = sentence.split()
-            ans = max(ans, len(line))
+            ans = max(ans, sentence.count(' ') + 1)
         
         return ans
