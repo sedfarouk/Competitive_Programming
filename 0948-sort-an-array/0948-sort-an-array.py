@@ -22,6 +22,9 @@ class Solution:
             else:
                 sorted_arr.append(arr[j])
                 j += 1
+
+        sorted_arr.extend(arr[i:])
+        sorted_arr.extend(arr[j:])
         
         return sorted_arr
         
