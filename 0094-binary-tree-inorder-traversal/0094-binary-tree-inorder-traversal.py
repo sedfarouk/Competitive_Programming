@@ -4,19 +4,19 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-class Solution:
-    def __init__(self):
-        self.lst = []
+class Solution:        
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]: 
+        lst = []
         
-    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:            
-        if not root:
-            return 
-        self.inorderTraversal(root.left)
-        self.lst.append(root.val)
-        self.inorderTraversal(root.right)
+        def inorder(root):
+            if not root:
+                return 
+            inorder(root.left)
+            lst.append(root.val)
+            inorder(root.right)
 
-        return self.lst
-        
+        inorder(root)
+        return lst        
         
         
 
