@@ -10,7 +10,7 @@ class Solution:
         def LCA(root):
             if p.val > root.val < q.val:
                 return LCA(root.right)
-            if p.val < root.val >q.val:
+            if p.val < root.val > q.val:
                 return LCA(root.left)
             return root
 
