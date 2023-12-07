@@ -9,13 +9,21 @@ class Node:
 from typing import Optional
 class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
-        head = dummy = deepcopy(node)
+        graph = {}
+        
         def dfs(node):
-            dummy = deepcopy(node)
-            for neighbour in node.neighbors:
-                dummy = dfs(neighbour)
-
-        return head
+            if not node:
+                return
+            
+            if node in graph:
+                return graph[node]
+            
+            graph[node] = Node(node.val)
+            graph[node].neighbors = [dfs(neighbor) for neighbor in node.neighbors]
+            
+            return graph[node]
+                
+        return dfs(node)
             
 
 
