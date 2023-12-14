@@ -4,18 +4,13 @@ class Solution:
         visited = set()
 
         while queue:
-            boundary = len(queue)
+            new_key = queue.pop()
+            room = rooms[new_key]
+            visited.add(new_key)
 
-            for _ in range(boundary):
-                key = queue.pop()
-                available = rooms[key]
-                visited.add(key)
+            for key in room:
+                if key not in visited:
+                    queue.append(key)
 
-                for key in available:
-                    if key not in visited:
-                        queue.append(key)
-
-        if len(visited) == len(rooms):
-            return True
-        return False
+        return len(visited) == len(rooms)
                     
