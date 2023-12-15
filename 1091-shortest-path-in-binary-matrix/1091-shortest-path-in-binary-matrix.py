@@ -3,6 +3,8 @@ class Solution:
         queue = deque([(0, 0, 0)])
         visited = set()
 
+        directions = [(0, 1), (1, 0), (1, 1), (1, -1), (-1, 1), (0, -1), (-1, 0), (-1, -1)]
+
         while queue:
             r, c, length = queue.popleft()
 
@@ -13,15 +15,8 @@ class Solution:
                 continue
 
             visited.add((r, c))
-
-            queue.append((r+1, c+1, length+1))
-            queue.append((r, c+1, length+1))
-            queue.append((r+1, c, length+1))
-            queue.append((r-1, c-1, length+1))
-            queue.append((r+1, c-1, length+1))
-            queue.append((r-1, c+1, length+1))
-            queue.append((r-1, c, length+1))
-            queue.append((r, c-1, length+1))
+            for dr, dc in directions:
+                queue.append((r+dr, c+dc, length+1))
 
         return -1
         
