@@ -14,7 +14,7 @@ class Solution:
                 queue.append(i)
 
         while len(queue) > 0:
-            q = queue.pop()
+            q = queue.popleft()
             ordering.append(q)
 
             for subj in graph[q]:
