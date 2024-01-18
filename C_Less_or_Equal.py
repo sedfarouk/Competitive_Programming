@@ -18,7 +18,8 @@ def solve():
     return ans
 
 print(solve())
-        
+
+# O(nlogn)
     
     
     
