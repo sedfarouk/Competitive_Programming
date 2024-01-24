@@ -6,34 +6,24 @@
 #         self.right = right
 class Solution:
     def pseudoPalindromicPaths (self, root: Optional[TreeNode]) -> int:
-        hashmap = defaultdict(int)
-        ans = [0]
-
-        def oddCnt(map):
-            cnt = 0
-            for val in map.values():
-                if val % 2 == 1:
-                    cnt += 1
-            
-            return cnt < 2
-
-        def recurse(root):
+        def recurse(root, sett):
             if not root:
-                return
+                return 0
 
-            hashmap[root.val] += 1
+            if root.val not in sett:
+                sett.add(root.val)
+            else:
+                sett.remove(root.val)
 
             if not root.left and not root.right:
-                if oddCnt(hashmap):
-                    ans[-1] += 1
+                return 1 if len(sett) < 2 else 0
 
-            recurse(root.left)
-            recurse(root.right)
-            hashmap[root.val] -= 1
+            left = recurse(root.left, set(sett))
+            right = recurse(root.right, set(sett))
 
-        recurse(root)
-        return ans[-1]
+            return left + right
 
+        return recurse(root, set())
             
 
 
