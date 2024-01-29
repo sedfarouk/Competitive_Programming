@@ -1,11 +1,10 @@
 class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:             
+    def permute(self, nums: List[int]) -> List[List[int]]:
         def is_valid_state(state):
-            if len(state)==len(nums):
-                return True
+            return len(state)==len(nums)
 
         def get_candidates(state):
-            return set(nums) - set(state)
+            return set(nums)-set(state)
 
         def search(state, solutions):
             if is_valid_state(state):
@@ -17,8 +16,6 @@ class Solution:
                 search(state, solutions)
                 state.pop()
 
-        
         solutions = []
-        state = []
-        search(state, solutions)
+        search([], solutions)
         return solutions
