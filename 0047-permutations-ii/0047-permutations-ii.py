@@ -24,7 +24,6 @@ class Solution:
                 state.pop()
                 count[candidate] += 1
 
-        count
         solutions = []
         state = []
         search(state, solutions, Counter(nums))
