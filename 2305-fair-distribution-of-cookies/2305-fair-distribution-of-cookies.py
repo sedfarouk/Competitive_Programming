@@ -16,5 +16,6 @@ class Solution:
                     distribute(childrenDistribution, idx+1)
                 childrenDistribution[i] -= cookies[idx]
 
+        cookies.sort(reverse=True)
         distribute(childrenDistribution, 0)
         return ans
