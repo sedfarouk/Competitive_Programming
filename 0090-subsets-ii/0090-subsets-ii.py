@@ -3,14 +3,12 @@ class Solution:
         def backtrack(state, idx):
             solutions.append(state.copy())
 
-            for i in range(idx, len(keys)):
-                if count[keys[i]] > 0:
-                    count[keys[i]] -= 1
-                    backtrack(state+[keys[i]], i)
-                    count[keys[i]] += 1
+            for i in range(idx, len(nums)):
+                if i!= idx and nums[i]==nums[i-1]:
+                    continue
+                backtrack(state + [nums[i]], i+1)
 
+        nums.sort()
         solutions = []
-        count = Counter(nums)
-        keys = list(count.keys())
         backtrack([], 0)
         return solutions
