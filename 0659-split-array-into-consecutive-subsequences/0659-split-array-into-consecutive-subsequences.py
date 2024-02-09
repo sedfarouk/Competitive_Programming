@@ -8,9 +8,10 @@ class Solution:
             else:
                 heappush(hashmap[num], 1)
 
-        for n in hashmap.values():
-            for x in n:
-                if x < 3:
+        for k, n in hashmap.items():
+            if hashmap[k]:
+                l = heappop(hashmap[k])
+                if l < 3:
                     return False
         return True
             
