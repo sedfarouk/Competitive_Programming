@@ -8,14 +8,16 @@ class Solution:
             while monostack and arr[monostack[-1]] < arr[i]:
                 prevGreater[monostack.pop()] = i
             monostack.append(i)
-
-        ans = [0]*n
-        for i in range(n-1, -1, -1):
-            if prevGreater[i]!=-1:
-                temp = arr[:]
-                temp[i], temp[prevGreater[i]] = temp[prevGreater[i]], temp[i]
-                if temp!=arr:
-                    ans = max(temp, ans)
-        return ans if ans!=[0]*n else arr
             
-
+        ans = [-1, -1]
+        for i in range(n-1, -1, -1):
+            if prevGreater[i] != -1:
+                if prevGreater[i]>ans[0] or (prevGreater[i]==ans[0] and arr[ans[1]]==arr[i]): 
+                    ans = [prevGreater[i], i]
+                
+        if ans!=[-1, -1]:
+            arr[ans[0]], arr[ans[1]] = arr[ans[1]], arr[ans[0]]
+            return arr
+        return arr
+                    
+            
