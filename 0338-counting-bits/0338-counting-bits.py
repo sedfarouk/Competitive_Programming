@@ -5,6 +5,6 @@ class Solution:
             rem = 0
             while dig>0:
                 rem += dig%2
-                dig //= 2
+                dig = dig >> 1
             ans.append(rem)
         return ans
