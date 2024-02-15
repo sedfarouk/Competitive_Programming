@@ -13,8 +13,7 @@ class Solution:
             
             for i in range(idx, len(nums)):
                 backtrack(i+1, OR | nums[i])
-        
-        nums.sort(reverse=True)
+
         backtrack(0, 0)
         return count
                 
