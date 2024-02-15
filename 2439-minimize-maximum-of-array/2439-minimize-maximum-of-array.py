@@ -10,14 +10,12 @@ class Solution:
             return temp[0] <= num
         
         l, r = 0, max(nums)
-        ans = -1
-        while l <= r:
+        while l < r:
             m = l + (r-l)//2
             
             if possible_maxx(m):
-                ans = m
-                r = m-1
+                r = m
             else:
                 l = m+1
                 
-        return ans
+        return l
