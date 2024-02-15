@@ -1,9 +1,9 @@
 class Solution:
     def countMaxOrSubsets(self, nums: List[int]) -> int:
-        visited = maxx = count = 0
+        maxx = count = 0
         
         def backtrack(idx, OR):
-            nonlocal visited, maxx, count
+            nonlocal maxx, count
             
             if OR==maxx:
                 count += 1
