@@ -4,7 +4,7 @@ class Solution:
         for dig in range(n+1):
             rem = 0
             while dig>0:
-                rem += dig%2
+                rem += dig & 1
                 dig >>= 1
             ans.append(rem)
         return ans
