@@ -6,22 +6,17 @@ def solve():
     for num in nums:
         maxx = max(maxx, num.bit_length())
 
-    zeros = []   
-    for i in range(31):
+    ans = ""  
+    for i in range(30, -1, -1):
         t = 0
         for num in nums:
-            t += num & (1<<i) != 0
-        zeros.append(n-t)
-
-    ans = ""
-    zeros.reverse()
-    for n in zeros:
-        if n <= k:
-            ans += "1"
-            k -= n
-        else:
-            ans += "0"
+            t += num & (1<<i) == 0
             
+        if t <= k:
+            ans += '1'
+            k -= t
+        else:
+            ans += '0'         
     return int(ans, 2)
 
 for _ in range(int(input())):
