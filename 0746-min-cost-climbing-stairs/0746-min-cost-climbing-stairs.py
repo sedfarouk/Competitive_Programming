@@ -5,11 +5,12 @@ class Solution:
         memo = {}
         
         def dp(idx):
+            if idx in memo: return memo[idx]
+            
             if idx < 2:
                 return cost[idx]
-            
-            if idx not in memo:
-                memo[idx] =  cost[idx] + min(dp(idx-1), dp(idx-2))
+ 
+            memo[idx] =  cost[idx] + min(dp(idx-1), dp(idx-2))
             return memo[idx]
         
         return dp(n)
