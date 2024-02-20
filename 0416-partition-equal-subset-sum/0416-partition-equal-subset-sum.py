@@ -11,10 +11,11 @@ class Solution:
             
             if state in memo: return memo[state]
             
-            if first==second and first+second==summ:
-                return True
             if first+second==summ:
+                if first==second:
+                    return True
                 return False
+
             memo[state] = dp(i+1, first+nums[i], second) or dp(i+1, first, second+nums[i])
             return memo[state]
         
