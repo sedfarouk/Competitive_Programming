@@ -1,17 +1,14 @@
 class Solution:
-    def rob(self, nums: List[int]) -> int:
-        if len(nums)==1: return nums[0]
-        
+    def rob(self, nums: List[int]) -> int:        
         n = len(nums)
         prev2, prev1, curr = 0, 0, 0
-        prev1, prev2 = nums[-1], max(nums[-1], nums[-2])
         
-        for i in range(n-3, -1, -1):
+        for i in range(n-1, -1, -1):
             curr = max(nums[i]+prev1, prev2)
             prev1 = prev2
             prev2 = curr           
             
-        return prev2
+        return curr
         
 #         memo = {}
         
