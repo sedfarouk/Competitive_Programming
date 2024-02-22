@@ -4,19 +4,10 @@ class Solution:
         cost.append(0)
         memo = {}
         
-        def dp(idx):
-            if idx in memo: return memo[idx]
+        def dp(i):
+            if i in memo: return memo[i]
+            if i<2: return cost[i]
             
-            if idx < 2:
-                return cost[idx]
- 
-            memo[idx] =  cost[idx] + min(dp(idx-1), dp(idx-2))
-            return memo[idx]
-        
+            memo[i] = cost[i] + min(dp(i-1), dp(i-2))
+            return memo[i]
         return dp(n)
-        
-                
-        
-        
-        
-            
