@@ -9,12 +9,12 @@ class Trie:
             if ch not in curr:
                 curr[ch] = {}
             curr = curr[ch] 
+        curr['#'] = {}
 
 
 class Solution:
     def longestWord(self, words: List[str]) -> str:
         myTrie = Trie()
-        sett = set(words)
 
         for w in words:
             myTrie.addWord(w)
@@ -29,10 +29,10 @@ class Solution:
                 q, s = queue.popleft()
                 
                 for k, v in q.items():
-                    if s in sett: 
+                    if '#' in q and k!='#': 
                         queue.append((v, s+k))
 
-                if s in sett and (len(s) > len(maxx_str) or (len(s)==len(maxx_str) and maxx_str > s)):
+                if '#' in q and (len(s) > len(maxx_str) or (len(s)==len(maxx_str) and maxx_str > s)):
                     maxx_str = s
         return maxx_str
 
