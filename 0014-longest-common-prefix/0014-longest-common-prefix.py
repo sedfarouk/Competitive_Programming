@@ -1,36 +1,42 @@
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+
 class Trie:
     def __init__(self):
-        self.root = {}
-
+        self.root = TrieNode()
+        
     def addWord(self, word):
         curr = self.root
 
         for ch in word:
-            if ch not in curr:
-                curr[ch] = {}
-            curr = curr[ch] 
+            if ch not in curr.children:
+                curr.children[ch] = TrieNode()
+            curr = curr.children[ch]
+            
+    def search(self, word, n):
+        curr = self.root
+        prefix_len = 0
+        
+        for ch in word:
+            if len(curr.children) != 1:
+                return prefix_len
+            prefix_len += 1
+            curr = curr.children[ch]
+        return prefix_len
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        longest_word = ""
-
-        for w in strs:
-            if len(w) > len(longest_word):
-                longest_word = w
-
-        myTrie = Trie()
-        myTrie.addWord(longest_word)
-
-        def dfs(node, idx, word):
-            if idx==len(word): return 0
-            if word[idx] not in node: return 0
-            
-            return dfs(node[word[idx]], idx+1, word) + 1
-
-        common_length = float("inf")
-        for w in strs:
-            common_length = min(common_length, dfs(myTrie.root, 0, w))
-        return strs[0][:common_length]
-
+        trie = Trie()
+        prefix_len = float("inf")
         
-
+        for word in strs:
+            trie.addWord(word)
+            
+        for word in strs:
+            prefix_len = min(prefix_len, trie.search(word, len(strs)))
+            
+        return strs[0][:prefix_len]
+            
+        
+        
