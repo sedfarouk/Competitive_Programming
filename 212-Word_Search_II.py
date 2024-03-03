@@ -31,7 +31,7 @@ class Solution:
 
         dirs = [(-1, 0), (1, 0), (0, 1), (0, -1)]
 
-        def dfs(r, c, cur):
+        def backtrack(r, c, cur):
             if not inbounds(r, c) or board[r][c] not in cur.children: 
                 return
 
@@ -44,11 +44,11 @@ class Solution:
                 cur.word = None
 
             for x, y in dirs: 
-                dfs(r + x, c + y, cur)
+                backtrack(r + x, c + y, cur)
             board[r][c] = original_char
 
         for r in range(m):
             for c in range(n):
-                dfs(r, c, trie.root)
+                backtrack(r, c, trie.root)
         return solution
             
