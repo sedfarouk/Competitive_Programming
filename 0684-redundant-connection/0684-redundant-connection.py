@@ -33,12 +33,8 @@ class UnionFind:
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
         forest = UnionFind(len(edges))
-        ans = [-1, -1]
 
         for edge in edges:
             if forest.find(edge[0]-1)==forest.find(edge[1]-1):
-                ans = [edge[0], edge[1]]
+                return [edge[0], edge[1]]
             forest.union(edge[0]-1, edge[1]-1)
-
-        return ans
-        
