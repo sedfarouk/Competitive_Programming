@@ -28,14 +28,16 @@ class UnionFind:
 
 class Solution:
     def findCircleNum(self, isConnected: List[List[int]]) -> int:
+        numberOfConnected = len(isConnected)
         forest = UnionFind(len(isConnected))
 
         for i in range(len(isConnected)):
-            for j in range(len(isConnected)):
-                if isConnected[i][j]==1:
+            for j in range(i+1, len(isConnected)):
+                if isConnected[i][j] and forest.find(i)!=forest.find(j):
+                    numberOfConnected -= 1
                     forest.union(i, j)
 
-        return len(set([forest.find(i) for i in range(len(isConnected))]))
+        return numberOfConnected
 
         
 
