@@ -2,11 +2,13 @@ class UnionFind:
     def __init__(self, accounts):
         self.parents = {}
         self.name = {}
+        self.size = {}
         
         for acct in accounts:
             for email in acct[1:]:
                 self.parents[email] = email
                 self.name[email] = acct[0]
+                self.size[email] = 1
 
     def find(self, root):
         if self.parents[root]==root:
@@ -18,7 +20,10 @@ class UnionFind:
         rootX, rootY = self.find(u), self.find(v)
 
         if rootX != rootY:
+            if self.size[rootX] > self.size[rootY]:
+                rootX, rootY = rootY, rootX
             self.parents[rootX] = rootY
+            self.size[rootY] += self.size[rootX]
 
 
 class Solution:
