@@ -5,12 +5,6 @@ class Solution:
         
         def get_ascii(letter):
             return ord(letter)-ord('a')+1
-
-        def check_equal(a, b):
-            for x, y in zip(a, b):
-                if x!=y:
-                    return False
-            return True
         
         def string_hash(s, l):
             hash_val = 0
@@ -33,7 +27,7 @@ class Solution:
             haystack_hash += get_ascii(haystack[i])
             haystack_hash %= MOD
             
-            if haystack_hash == needle_hash and check_equal(haystack[i-m+1:i+1], needle):
+            if haystack_hash == needle_hash:
                 return i-m+1
         return -1
             
