@@ -13,14 +13,11 @@ class Solution:
             diff_arr[i] += diff_arr[i-1]
 
         ans = ""
-        for idx, val in enumerate(diff_arr[1:n+1]):
-            new_val = ord(s[idx]) + val
-
-            if new_val < 97:
-                new_val = 122-((96-new_val)%26)
-            elif new_val > 122:
-                new_val = 97+((new_val-123) % 26)
-            ans += chr(new_val)
+        for i in range(n):
+            char = ord(s[i])-ord('a')
+            char += diff_arr[i+1]
+            char %= 26
+            ans += chr(char+ord("a"))
 
         return ans
 
