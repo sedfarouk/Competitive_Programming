@@ -1,31 +1,29 @@
 class Solution:
-    def repeatedStringMatch(self, a: str, pattern: str) -> int:
-        n, m = len(pattern), len(a)
-        lps = [0]*n
-        prevLps, i = 0, 1
+    def repeatedStringMatch(self, a: str, b: str) -> int:
+        
+        def func(repeat):
+            val = b + '#' + a*repeat
 
-        while i < n:
-            if pattern[i]==pattern[prevLps]:
-                lps[i] = prevLps+1
-                i += 1
-                prevLps += 1
-            elif prevLps==0:
-                i += 1            
-            else:
-                prevLps = lps[prevLps-1]
+            lps = [0]*len(val)
 
-        a *= math.ceil((n+m-1)/m)
+            for i in range(1, len(val)):
+                j = lps[i-1]
 
-        patternIdx = 0
-        for idx, ch in enumerate(a):
-            while patternIdx and pattern[patternIdx] != ch:
-                patternIdx = lps[patternIdx-1]
+                while j > 0 and val[i]!= val[j]:
+                    j = lps[j-1]
 
-            if pattern[patternIdx]==ch:                
-                if patternIdx==n-1:
-                    return math.ceil((idx+1)/m)
-                
-                else:
-                    patternIdx += 1
+                if val[i] == val[j]:
+                    j +=1
 
+                if j == len(b):
+                    return 1
+
+                lps[i] = j
+
+            return 0
+
+        for i in range(len(b)//len(a), len(b)//len(a)+3):
+            if func(i): return i
         return -1
+
+        
