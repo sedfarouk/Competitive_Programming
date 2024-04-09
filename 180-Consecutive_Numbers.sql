@@ -1,3 +1,3 @@
-SELECT DISTINCT num AS ConsecutiveNums
-FROM (SELECT num, LAG(num) OVER (ORDER BY id) AS previous, LEAD(num) OVER (ORDER BY id) AS current FROM Logs) prev_next
-WHERE num=previous AND previous=current;
+SELECT DISTINCT a.num AS ConsecutiveNums
+FROM Logs a, Logs b, Logs c
+WHERE a.Id = b.Id - 1 AND b.Id = c.Id - 1 AND a.num = b.num AND b.num = c.num
