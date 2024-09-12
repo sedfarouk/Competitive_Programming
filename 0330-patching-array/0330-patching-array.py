@@ -9,6 +9,6 @@ class Solution:
                 i += 1
             else:
                 ans += 1
-                cnt = (cnt << 1)
-        return ans if cnt >= n else ans + 1
+                cnt <<= 1
+        return ans
             
