@@ -9,7 +9,7 @@ class Solution:
         def dfs(node, val, ans):
             nonlocal p
             if node.val==val:
-                p.append(ans[::-1])
+                p.append(ans[:])
                 return
             
             if not node.left and not node.right:
@@ -29,8 +29,8 @@ class Solution:
         p = []
         dfs(root, startValue, [])
         dfs(root, destValue, [])
-        pathStart = p[0][::-1]
-        pathDest = p[1][::-1]
+        pathStart = p[0][:]
+        pathDest = p[1][:]
 
         if pathStart==None:
             return pathDest
