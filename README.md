@@ -9,6 +9,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0330-patching-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0330-patching-array) |
+| [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
 | [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/sedfarouk/Competitive_Programming/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 ## Greedy
 |  |
@@ -43,4 +44,17 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0670-maximum-swap](https://github.com/sedfarouk/Competitive_Programming/tree/master/0670-maximum-swap) |
+| [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
+## Binary Search
+|  |
+| ------- |
+| [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
+## Prefix Sum
+|  |
+| ------- |
+| [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
+## Randomized
+|  |
+| ------- |
+| [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
 <!---LeetCode Topics End-->
