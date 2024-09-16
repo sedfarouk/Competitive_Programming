@@ -1,26 +1,30 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        minn = float("inf")
-        win = ""
-        hashmap = defaultdict(int)
-        t_cnt = Counter(t)
-        cnt = left = 0
+        cnt = Counter(t)
+        letters = defaultdict(int)
+        c = l = 0
+        minn = [float("-inf"), float("inf")]
+        seen = set()
 
-        for right in range(len(s)):
-            hashmap[s[right]] += 1
+        for r in range(len(s)):
+            letters[s[r]] += 1
+            if s[r] in cnt and s[r] not in seen and letters[s[r]] >= cnt[s[r]]:
+                seen.add(s[r])
+                c += 1
 
-            if s[right] in t_cnt and hashmap[s[right]] <= t_cnt[s[right]]:
-                cnt += 1
+            while c >= len(cnt):
+                if (r-l+1) < (minn[1] - minn[0] + 1):
+                    minn = [l, r]
 
-            while cnt==len(t):
-                dist = right-left+1
-                if dist < minn:
-                    win = s[left:right+1]
-                    minn = dist
+                letters[s[l]] -= 1
+                if s[l] in cnt and letters[s[l]] < cnt[s[l]]:
+                    seen.remove(s[l])
+                    c -= 1
+                
+                if letters[s[l]]==0:
+                    del letters[s[l]]
+                l += 1
 
-                hashmap[s[left]] -= 1
-                if s[left] in t_cnt and hashmap[s[left]] < t_cnt[s[left]]:
-                    cnt -= 1
-                left += 1
-
-        return win
+        if minn[0]==float("-inf"):
+            return ""
+        return s[minn[0]:minn[1]+1]
