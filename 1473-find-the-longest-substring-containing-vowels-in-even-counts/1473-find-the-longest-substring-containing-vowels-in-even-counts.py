@@ -1,7 +1,7 @@
 class Solution:
     def findTheLongestSubstring(self, s: str) -> int:
         hashmap = defaultdict(int)
-        cnt = (2**5)-1
+        cnt = 32
         hashmap[cnt] = 0
         ans = 0
 
