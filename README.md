@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bit Manipulation
 |  |
 | ------- |
+| [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/sedfarouk/Competitive_Programming/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [2323-minimum-bit-flips-to-convert-number](https://github.com/sedfarouk/Competitive_Programming/tree/master/2323-minimum-bit-flips-to-convert-number) |
 ## Array
 |  |
@@ -30,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0076-minimum-window-substring](https://github.com/sedfarouk/Competitive_Programming/tree/master/0076-minimum-window-substring) |
+| [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/sedfarouk/Competitive_Programming/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/sedfarouk/Competitive_Programming/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 ## Tree
 |  |
@@ -57,6 +59,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1016-subarray-sums-divisible-by-k) |
+| [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/sedfarouk/Competitive_Programming/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 ## Randomized
 |  |
 | ------- |
@@ -66,6 +69,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0076-minimum-window-substring](https://github.com/sedfarouk/Competitive_Programming/tree/master/0076-minimum-window-substring) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1016-subarray-sums-divisible-by-k) |
+| [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/sedfarouk/Competitive_Programming/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 ## Sliding Window
 |  |
 | ------- |
