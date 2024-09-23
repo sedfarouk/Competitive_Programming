@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0330-patching-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0330-patching-array) |
 | [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
+| [1016-subarray-sums-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/sedfarouk/Competitive_Programming/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 | [2176-parallel-courses-iii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2176-parallel-courses-iii) |
 ## Greedy
@@ -55,6 +56,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
+| [1016-subarray-sums-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1016-subarray-sums-divisible-by-k) |
 ## Randomized
 |  |
 | ------- |
@@ -63,6 +65,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0076-minimum-window-substring](https://github.com/sedfarouk/Competitive_Programming/tree/master/0076-minimum-window-substring) |
+| [1016-subarray-sums-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1016-subarray-sums-divisible-by-k) |
 ## Sliding Window
 |  |
 | ------- |
