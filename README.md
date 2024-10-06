@@ -16,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/sedfarouk/Competitive_Programming/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
 | [1694-make-sum-divisible-by-p](https://github.com/sedfarouk/Competitive_Programming/tree/master/1694-make-sum-divisible-by-p) |
+| [1923-sentence-similarity-iii](https://github.com/sedfarouk/Competitive_Programming/tree/master/1923-sentence-similarity-iii) |
 | [2176-parallel-courses-iii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2176-parallel-courses-iii) |
 ## Greedy
 |  |
@@ -35,6 +36,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0076-minimum-window-substring](https://github.com/sedfarouk/Competitive_Programming/tree/master/0076-minimum-window-substring) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/sedfarouk/Competitive_Programming/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
+| [1923-sentence-similarity-iii](https://github.com/sedfarouk/Competitive_Programming/tree/master/1923-sentence-similarity-iii) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/sedfarouk/Competitive_Programming/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 ## Tree
 |  |
@@ -101,4 +103,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1256-rank-transform-of-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1256-rank-transform-of-an-array) |
+## Two Pointers
+|  |
+| ------- |
+| [1923-sentence-similarity-iii](https://github.com/sedfarouk/Competitive_Programming/tree/master/1923-sentence-similarity-iii) |
 <!---LeetCode Topics End-->
