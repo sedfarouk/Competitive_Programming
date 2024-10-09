@@ -1,16 +1,15 @@
 class Solution:
     def minAddToMakeValid(self, s: str) -> int:
-        stack = deque()
-        ans = 0
+        ans = stack_size = 0
 
-        for letter in s:
-            if letter == ")" and stack and stack[-1]=="(":
-                stack.pop()
-            elif letter=="(":
-                stack.append(letter)
+        for b in s:
+            if b=='(':
+                stack_size += 1
             else:
-                ans+=1
+                if stack_size > 0:
+                    stack_size -= 1
+                else:
+                    ans += 1
+        return ans + stack_size
+
         
-        ans += len(stack)
-        return ans
-            
