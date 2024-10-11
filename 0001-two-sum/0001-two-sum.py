@@ -3,13 +3,10 @@ class Solution:
         hashmap = {}
 
         for i in range(len(nums)):
-            diff = target - nums[i]
-
-            if diff in hashmap.keys():
-                return [hashmap[diff], i]
+            if target-nums[i] in hashmap:
+                return hashmap[target-nums[i]], i
             hashmap[nums[i]] = i
-            
+
 
 
         
-            
