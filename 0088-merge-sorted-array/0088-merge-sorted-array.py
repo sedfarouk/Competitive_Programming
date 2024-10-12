@@ -3,19 +3,17 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        l = r = 0
-        while l < m and r < n:
-            if nums1[l] > nums2[r]:
-                prev = nums1[l]
-                for i in range(l+1, len(nums1)):
-                    temp = prev
-                    prev = nums1[i]
-                    nums1[i] = temp
-                nums1[l] = nums2[r]
-                m += 1; r += 1; 
-            l += 1
+        l = m-1
+        r = n-1
+        k = m + n - 1
+        while r >= 0:
+            if l >= 0 and nums2[r] <= nums1[l]:
+                nums1[k] = nums1[l]
+                l -= 1
+            else:
+                nums1[k] = nums2[r]
+                r -= 1
+            k -= 1
 
-        while r < n:
-            nums1[l] = nums2[r]
-            r += 1; l += 1
+        
         
