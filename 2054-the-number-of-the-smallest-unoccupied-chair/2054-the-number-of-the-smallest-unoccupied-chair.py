@@ -3,7 +3,7 @@ class Solution:
         opening  = {times[i][0]:i for i in range(len(times))}
         closing = defaultdict(list)
         assign = {}
-        heap = [i for i in range(10**5 + 1)]
+        heap = [i for i in range(50001)]
         
         for i in range(len(times)):
             closing[times[i][1]].append(i)
