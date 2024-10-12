@@ -1,18 +1,16 @@
 class Solution:
     def smallestChair(self, times: List[List[int]], targetFriend: int) -> int:
-        opening  = {times[i][0]:i for i in range(len(times))}
-        closing = defaultdict(list)
-        assign = {}
-        heap = [i for i in range(50001)]
-        
-        for i in range(len(times)):
-            closing[times[i][1]].append(i)
-        
-        for i in range(10**5 + 1):
-            while closing[i]:
-                heappush(heap, assign[closing[i].pop()])
+        order = sorted(range(len(times)), key=lambda x:times[x][0])
+        free, taken = list(range(len(times))), []
+
+        for i in order:
+            ar, lv = times[i]
+
+            while taken and taken[0][0] <= ar:
+                heappush(free, heappop(taken)[1])
+
+            pos = heappop(free)
             
-            if i in opening:
-                assign[opening[i]] = heappop(heap)
-        
-        return assign[targetFriend]
+            if i==targetFriend: return pos
+
+            heappush(taken, (lv, pos))
