@@ -12,14 +12,11 @@ class Solution:
                     prev = nums1[i]
                     nums1[i] = temp
                 nums1[l] = nums2[r]
-                m += 1
-                r += 1
-                l += 1
+                m += 1; r += 1; l += 1
             else:
                 l += 1
 
         while r < n:
             nums1[l] = nums2[r]
-            r += 1
-            l += 1
+            r += 1; l += 1
         
