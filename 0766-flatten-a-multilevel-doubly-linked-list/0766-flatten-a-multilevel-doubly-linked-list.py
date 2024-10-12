@@ -14,7 +14,7 @@ class Solution:
             if not node.next and not node.child:
                 return node
 
-            dummy = node.next
+            child_node = Node()
             if node.child:
                 child_node = recurse(node.child)
 
@@ -25,8 +25,7 @@ class Solution:
                 node.child.prev = node
                 node.child = None
 
-            if dummy:
-                child_node = recurse(dummy)
+            child_node = recurse(node.next)
             return child_node
 
         if not head: return head
