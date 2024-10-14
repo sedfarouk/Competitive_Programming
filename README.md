@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0001-two-sum) |
+| [0016-3sum-closest](https://github.com/sedfarouk/Competitive_Programming/tree/master/0016-3sum-closest) |
 | [0088-merge-sorted-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0088-merge-sorted-array) |
 | [0239-sliding-window-maximum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0239-sliding-window-maximum) |
 | [0330-patching-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0330-patching-array) |
@@ -126,6 +127,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 |  |
 | ------- |
+| [0016-3sum-closest](https://github.com/sedfarouk/Competitive_Programming/tree/master/0016-3sum-closest) |
 | [0088-merge-sorted-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0088-merge-sorted-array) |
 | [0632-smallest-range-covering-elements-from-k-lists](https://github.com/sedfarouk/Competitive_Programming/tree/master/0632-smallest-range-covering-elements-from-k-lists) |
 | [1256-rank-transform-of-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1256-rank-transform-of-an-array) |
@@ -133,6 +135,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 |  |
 | ------- |
+| [0016-3sum-closest](https://github.com/sedfarouk/Competitive_Programming/tree/master/0016-3sum-closest) |
 | [0088-merge-sorted-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0088-merge-sorted-array) |
 | [1923-sentence-similarity-iii](https://github.com/sedfarouk/Competitive_Programming/tree/master/1923-sentence-similarity-iii) |
 | [2095-minimum-number-of-swaps-to-make-the-string-balanced](https://github.com/sedfarouk/Competitive_Programming/tree/master/2095-minimum-number-of-swaps-to-make-the-string-balanced) |
