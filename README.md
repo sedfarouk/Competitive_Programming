@@ -11,6 +11,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0001-two-sum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0001-two-sum) |
 | [0088-merge-sorted-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0088-merge-sorted-array) |
+| [0239-sliding-window-maximum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0239-sliding-window-maximum) |
 | [0330-patching-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0330-patching-array) |
 | [0632-smallest-range-covering-elements-from-k-lists](https://github.com/sedfarouk/Competitive_Programming/tree/master/0632-smallest-range-covering-elements-from-k-lists) |
 | [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
@@ -104,6 +105,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0076-minimum-window-substring](https://github.com/sedfarouk/Competitive_Programming/tree/master/0076-minimum-window-substring) |
+| [0239-sliding-window-maximum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0239-sliding-window-maximum) |
 | [0632-smallest-range-covering-elements-from-k-lists](https://github.com/sedfarouk/Competitive_Programming/tree/master/0632-smallest-range-covering-elements-from-k-lists) |
 ## Dynamic Programming
 |  |
@@ -154,6 +156,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Heap (Priority Queue)
 |  |
 | ------- |
+| [0239-sliding-window-maximum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0239-sliding-window-maximum) |
 | [0632-smallest-range-covering-elements-from-k-lists](https://github.com/sedfarouk/Competitive_Programming/tree/master/0632-smallest-range-covering-elements-from-k-lists) |
 | [2054-the-number-of-the-smallest-unoccupied-chair](https://github.com/sedfarouk/Competitive_Programming/tree/master/2054-the-number-of-the-smallest-unoccupied-chair) |
 | [2488-divide-intervals-into-minimum-number-of-groups](https://github.com/sedfarouk/Competitive_Programming/tree/master/2488-divide-intervals-into-minimum-number-of-groups) |
@@ -166,4 +169,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0766-flatten-a-multilevel-doubly-linked-list](https://github.com/sedfarouk/Competitive_Programming/tree/master/0766-flatten-a-multilevel-doubly-linked-list) |
+## Queue
+|  |
+| ------- |
+| [0239-sliding-window-maximum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0239-sliding-window-maximum) |
+## Monotonic Queue
+|  |
+| ------- |
+| [0239-sliding-window-maximum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0239-sliding-window-maximum) |
 <!---LeetCode Topics End-->
