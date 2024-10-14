@@ -14,13 +14,8 @@ class Solution:
             for i in range(n-1, pos, -1):
                 if nums[i] > nums[pos]:
                     nums[pos], nums[i] = nums[i], nums[pos]
-                    l, r = pos+1, n-1
-                    
-                    while l < r:
-                        nums[l], nums[r] = nums[r], nums[l]
-                        l += 1; r -= 1
+                    nums[pos+1:] = reversed(nums[pos+1:])
                     break
-
         else:
             nums.reverse()
 
