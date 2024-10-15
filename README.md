@@ -44,6 +44,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Breadth-First Search
 |  |
 | ------- |
+| [0103-binary-tree-zigzag-level-order-traversal](https://github.com/sedfarouk/Competitive_Programming/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
 | [0399-evaluate-division](https://github.com/sedfarouk/Competitive_Programming/tree/master/0399-evaluate-division) |
 | [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/sedfarouk/Competitive_Programming/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 ## Matrix
@@ -68,6 +69,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Tree
 |  |
 | ------- |
+| [0103-binary-tree-zigzag-level-order-traversal](https://github.com/sedfarouk/Competitive_Programming/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/sedfarouk/Competitive_Programming/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 ## Depth-First Search
 |  |
@@ -78,6 +80,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Tree
 |  |
 | ------- |
+| [0103-binary-tree-zigzag-level-order-traversal](https://github.com/sedfarouk/Competitive_Programming/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/sedfarouk/Competitive_Programming/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 ## Math
 |  |
