@@ -25,11 +25,11 @@ class Solution:
             d *= -1
 
             for i in range(level):
-                if queue[0].left:
-                    queue.append(queue[0].left)
-                if queue[0].right:
-                    queue.append(queue[0].right)
-                queue.popleft()
+                q = queue.popleft()
+                if q.left:
+                    queue.append(q.left)
+                if q.right:
+                    queue.append(q.right)
         
         return ans
 
