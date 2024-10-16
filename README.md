@@ -63,6 +63,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/sedfarouk/Competitive_Programming/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 | [1030-smallest-string-starting-from-leaf](https://github.com/sedfarouk/Competitive_Programming/tree/master/1030-smallest-string-starting-from-leaf) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/sedfarouk/Competitive_Programming/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
+| [1512-design-underground-system](https://github.com/sedfarouk/Competitive_Programming/tree/master/1512-design-underground-system) |
 | [1923-sentence-similarity-iii](https://github.com/sedfarouk/Competitive_Programming/tree/master/1923-sentence-similarity-iii) |
 | [2095-minimum-number-of-swaps-to-make-the-string-balanced](https://github.com/sedfarouk/Competitive_Programming/tree/master/2095-minimum-number-of-swaps-to-make-the-string-balanced) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/sedfarouk/Competitive_Programming/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
@@ -120,6 +121,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1016-subarray-sums-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1256-rank-transform-of-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1256-rank-transform-of-an-array) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/sedfarouk/Competitive_Programming/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
+| [1512-design-underground-system](https://github.com/sedfarouk/Competitive_Programming/tree/master/1512-design-underground-system) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
 | [1694-make-sum-divisible-by-p](https://github.com/sedfarouk/Competitive_Programming/tree/master/1694-make-sum-divisible-by-p) |
 | [1775-design-an-ordered-stream](https://github.com/sedfarouk/Competitive_Programming/tree/master/1775-design-an-ordered-stream) |
@@ -237,6 +239,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/sedfarouk/Competitive_Programming/tree/master/0146-lru-cache) |
+| [1512-design-underground-system](https://github.com/sedfarouk/Competitive_Programming/tree/master/1512-design-underground-system) |
 | [1775-design-an-ordered-stream](https://github.com/sedfarouk/Competitive_Programming/tree/master/1775-design-an-ordered-stream) |
 ## Data Stream
 |  |
