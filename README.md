@@ -113,6 +113,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0001-two-sum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0001-two-sum) |
 | [0076-minimum-window-substring](https://github.com/sedfarouk/Competitive_Programming/tree/master/0076-minimum-window-substring) |
 | [0139-word-break](https://github.com/sedfarouk/Competitive_Programming/tree/master/0139-word-break) |
+| [0146-lru-cache](https://github.com/sedfarouk/Competitive_Programming/tree/master/0146-lru-cache) |
 | [0387-first-unique-character-in-a-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/0387-first-unique-character-in-a-string) |
 | [0632-smallest-range-covering-elements-from-k-lists](https://github.com/sedfarouk/Competitive_Programming/tree/master/0632-smallest-range-covering-elements-from-k-lists) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1016-subarray-sums-divisible-by-k) |
@@ -193,10 +194,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Linked List
 |  |
 | ------- |
+| [0146-lru-cache](https://github.com/sedfarouk/Competitive_Programming/tree/master/0146-lru-cache) |
 | [0766-flatten-a-multilevel-doubly-linked-list](https://github.com/sedfarouk/Competitive_Programming/tree/master/0766-flatten-a-multilevel-doubly-linked-list) |
 ## Doubly-Linked List
 |  |
 | ------- |
+| [0146-lru-cache](https://github.com/sedfarouk/Competitive_Programming/tree/master/0146-lru-cache) |
 | [0766-flatten-a-multilevel-doubly-linked-list](https://github.com/sedfarouk/Competitive_Programming/tree/master/0766-flatten-a-multilevel-doubly-linked-list) |
 ## Queue
 |  |
@@ -228,4 +231,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1030-smallest-string-starting-from-leaf](https://github.com/sedfarouk/Competitive_Programming/tree/master/1030-smallest-string-starting-from-leaf) |
+## Design
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/sedfarouk/Competitive_Programming/tree/master/0146-lru-cache) |
 <!---LeetCode Topics End-->
