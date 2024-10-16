@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0016-3sum-closest](https://github.com/sedfarouk/Competitive_Programming/tree/master/0016-3sum-closest) |
 | [0031-next-permutation](https://github.com/sedfarouk/Competitive_Programming/tree/master/0031-next-permutation) |
 | [0088-merge-sorted-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0088-merge-sorted-array) |
+| [0128-longest-consecutive-sequence](https://github.com/sedfarouk/Competitive_Programming/tree/master/0128-longest-consecutive-sequence) |
 | [0139-word-break](https://github.com/sedfarouk/Competitive_Programming/tree/master/0139-word-break) |
 | [0239-sliding-window-maximum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0239-sliding-window-maximum) |
 | [0330-patching-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0330-patching-array) |
@@ -115,6 +116,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0001-two-sum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0001-two-sum) |
 | [0076-minimum-window-substring](https://github.com/sedfarouk/Competitive_Programming/tree/master/0076-minimum-window-substring) |
+| [0128-longest-consecutive-sequence](https://github.com/sedfarouk/Competitive_Programming/tree/master/0128-longest-consecutive-sequence) |
 | [0139-word-break](https://github.com/sedfarouk/Competitive_Programming/tree/master/0139-word-break) |
 | [0146-lru-cache](https://github.com/sedfarouk/Competitive_Programming/tree/master/0146-lru-cache) |
 | [0387-first-unique-character-in-a-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/0387-first-unique-character-in-a-string) |
@@ -219,6 +221,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Union Find
 |  |
 | ------- |
+| [0128-longest-consecutive-sequence](https://github.com/sedfarouk/Competitive_Programming/tree/master/0128-longest-consecutive-sequence) |
 | [0399-evaluate-division](https://github.com/sedfarouk/Competitive_Programming/tree/master/0399-evaluate-division) |
 ## Shortest Path
 |  |
