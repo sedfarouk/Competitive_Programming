@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0015-3sum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0015-3sum) |
 | [0016-3sum-closest](https://github.com/sedfarouk/Competitive_Programming/tree/master/0016-3sum-closest) |
 | [0031-next-permutation](https://github.com/sedfarouk/Competitive_Programming/tree/master/0031-next-permutation) |
+| [0042-trapping-rain-water](https://github.com/sedfarouk/Competitive_Programming/tree/master/0042-trapping-rain-water) |
 | [0088-merge-sorted-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0088-merge-sorted-array) |
 | [0128-longest-consecutive-sequence](https://github.com/sedfarouk/Competitive_Programming/tree/master/0128-longest-consecutive-sequence) |
 | [0139-word-break](https://github.com/sedfarouk/Competitive_Programming/tree/master/0139-word-break) |
@@ -141,6 +142,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/sedfarouk/Competitive_Programming/tree/master/0042-trapping-rain-water) |
 | [0139-word-break](https://github.com/sedfarouk/Competitive_Programming/tree/master/0139-word-break) |
 | [1488-sort-integers-by-the-power-value](https://github.com/sedfarouk/Competitive_Programming/tree/master/1488-sort-integers-by-the-power-value) |
 | [2176-parallel-courses-iii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2176-parallel-courses-iii) |
@@ -174,6 +176,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0015-3sum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0015-3sum) |
 | [0016-3sum-closest](https://github.com/sedfarouk/Competitive_Programming/tree/master/0016-3sum-closest) |
 | [0031-next-permutation](https://github.com/sedfarouk/Competitive_Programming/tree/master/0031-next-permutation) |
+| [0042-trapping-rain-water](https://github.com/sedfarouk/Competitive_Programming/tree/master/0042-trapping-rain-water) |
 | [0088-merge-sorted-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0088-merge-sorted-array) |
 | [1923-sentence-similarity-iii](https://github.com/sedfarouk/Competitive_Programming/tree/master/1923-sentence-similarity-iii) |
 | [2095-minimum-number-of-swaps-to-make-the-string-balanced](https://github.com/sedfarouk/Competitive_Programming/tree/master/2095-minimum-number-of-swaps-to-make-the-string-balanced) |
@@ -183,6 +186,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/sedfarouk/Competitive_Programming/tree/master/0020-valid-parentheses) |
+| [0042-trapping-rain-water](https://github.com/sedfarouk/Competitive_Programming/tree/master/0042-trapping-rain-water) |
 | [0394-decode-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/0394-decode-string) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/sedfarouk/Competitive_Programming/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 | [1002-maximum-width-ramp](https://github.com/sedfarouk/Competitive_Programming/tree/master/1002-maximum-width-ramp) |
@@ -195,6 +199,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Monotonic Stack
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/sedfarouk/Competitive_Programming/tree/master/0042-trapping-rain-water) |
 | [1002-maximum-width-ramp](https://github.com/sedfarouk/Competitive_Programming/tree/master/1002-maximum-width-ramp) |
 ## Heap (Priority Queue)
 |  |
