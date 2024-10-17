@@ -79,12 +79,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Tree
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/sedfarouk/Competitive_Programming/tree/master/0098-validate-binary-search-tree) |
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/sedfarouk/Competitive_Programming/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
 | [1030-smallest-string-starting-from-leaf](https://github.com/sedfarouk/Competitive_Programming/tree/master/1030-smallest-string-starting-from-leaf) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/sedfarouk/Competitive_Programming/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 ## Depth-First Search
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/sedfarouk/Competitive_Programming/tree/master/0098-validate-binary-search-tree) |
 | [0399-evaluate-division](https://github.com/sedfarouk/Competitive_Programming/tree/master/0399-evaluate-division) |
 | [0766-flatten-a-multilevel-doubly-linked-list](https://github.com/sedfarouk/Competitive_Programming/tree/master/0766-flatten-a-multilevel-doubly-linked-list) |
 | [1030-smallest-string-starting-from-leaf](https://github.com/sedfarouk/Competitive_Programming/tree/master/1030-smallest-string-starting-from-leaf) |
@@ -92,6 +94,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Tree
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/sedfarouk/Competitive_Programming/tree/master/0098-validate-binary-search-tree) |
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/sedfarouk/Competitive_Programming/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
 | [1030-smallest-string-starting-from-leaf](https://github.com/sedfarouk/Competitive_Programming/tree/master/1030-smallest-string-starting-from-leaf) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/sedfarouk/Competitive_Programming/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
@@ -268,4 +271,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0394-decode-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/0394-decode-string) |
+## Binary Search Tree
+|  |
+| ------- |
+| [0098-validate-binary-search-tree](https://github.com/sedfarouk/Competitive_Programming/tree/master/0098-validate-binary-search-tree) |
 <!---LeetCode Topics End-->
