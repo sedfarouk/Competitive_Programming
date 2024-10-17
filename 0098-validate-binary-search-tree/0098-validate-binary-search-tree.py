@@ -6,21 +6,16 @@
 #         self.right = right
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        def isValid(root, minn, maxx):
+        def recurse(root, minn, maxx):
             if not root:
                 return True
-            
-            if minn >= root.val or maxx <= root.val:
+
+            if root.val >= maxx or root.val <= minn:
                 return False
-            
-            left = isValid(root.left, minn, root.val)
-            right = isValid(root.right, root.val, maxx)
-            
-            if left and right:
-                return True
-            
-        return isValid(root, float("-inf"), float("inf"))
-            
-            
-            
-        
+
+            left = recurse(root.left, minn, root.val)
+            right = recurse(root.right, root.val, maxx)
+
+            return left and right
+
+        return recurse(root, float("-inf"), float("inf"))
