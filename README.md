@@ -62,6 +62,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0020-valid-parentheses](https://github.com/sedfarouk/Competitive_Programming/tree/master/0020-valid-parentheses) |
 | [0076-minimum-window-substring](https://github.com/sedfarouk/Competitive_Programming/tree/master/0076-minimum-window-substring) |
 | [0139-word-break](https://github.com/sedfarouk/Competitive_Programming/tree/master/0139-word-break) |
+| [0242-valid-anagram](https://github.com/sedfarouk/Competitive_Programming/tree/master/0242-valid-anagram) |
 | [0387-first-unique-character-in-a-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/0387-first-unique-character-in-a-string) |
 | [0394-decode-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/0394-decode-string) |
 | [0399-evaluate-division](https://github.com/sedfarouk/Competitive_Programming/tree/master/0399-evaluate-division) |
@@ -123,6 +124,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0128-longest-consecutive-sequence](https://github.com/sedfarouk/Competitive_Programming/tree/master/0128-longest-consecutive-sequence) |
 | [0139-word-break](https://github.com/sedfarouk/Competitive_Programming/tree/master/0139-word-break) |
 | [0146-lru-cache](https://github.com/sedfarouk/Competitive_Programming/tree/master/0146-lru-cache) |
+| [0242-valid-anagram](https://github.com/sedfarouk/Competitive_Programming/tree/master/0242-valid-anagram) |
 | [0387-first-unique-character-in-a-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/0387-first-unique-character-in-a-string) |
 | [0632-smallest-range-covering-elements-from-k-lists](https://github.com/sedfarouk/Competitive_Programming/tree/master/0632-smallest-range-covering-elements-from-k-lists) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1016-subarray-sums-divisible-by-k) |
@@ -166,6 +168,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0015-3sum](https://github.com/sedfarouk/Competitive_Programming/tree/master/0015-3sum) |
 | [0016-3sum-closest](https://github.com/sedfarouk/Competitive_Programming/tree/master/0016-3sum-closest) |
 | [0088-merge-sorted-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0088-merge-sorted-array) |
+| [0242-valid-anagram](https://github.com/sedfarouk/Competitive_Programming/tree/master/0242-valid-anagram) |
 | [0632-smallest-range-covering-elements-from-k-lists](https://github.com/sedfarouk/Competitive_Programming/tree/master/0632-smallest-range-covering-elements-from-k-lists) |
 | [1256-rank-transform-of-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1256-rank-transform-of-an-array) |
 | [1488-sort-integers-by-the-power-value](https://github.com/sedfarouk/Competitive_Programming/tree/master/1488-sort-integers-by-the-power-value) |
