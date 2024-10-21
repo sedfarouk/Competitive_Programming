@@ -1,18 +1,14 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
-        solutions = set()
+        seen = set()
         
-        def dp(i, prev):
-            if i==len(s): return len(solutions) + int(prev != i and s[prev : i + 1] not in solutions)
-
+        def backtrack(s):
             ans = 0
-            if s[prev : i + 1] not in solutions:
-                solutions.add(s[prev : i + 1])
-                ans = max(ans, dp(i + 1, i + 1))
-                solutions.remove(s[prev : i + 1])
-            else:
-                ans = max(ans, dp(i + 1, i + 1))
-
-            ans = max(ans, dp(i + 1, prev))
+            for i in range(1, len(s)+1):
+                if s[:i] not in seen:
+                    seen.add(s[:i])
+                    ans = max(ans, backtrack(s[i:]) + 1)
+                    seen.remove(s[:i])
             return ans
-        return dp(0, 0)
+        return backtrack(s)
+        
