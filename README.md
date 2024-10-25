@@ -86,6 +86,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/sedfarouk/Competitive_Programming/tree/master/0098-validate-binary-search-tree) |
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/sedfarouk/Competitive_Programming/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
+| [0988-flip-equivalent-binary-trees](https://github.com/sedfarouk/Competitive_Programming/tree/master/0988-flip-equivalent-binary-trees) |
 | [1030-smallest-string-starting-from-leaf](https://github.com/sedfarouk/Competitive_Programming/tree/master/1030-smallest-string-starting-from-leaf) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/sedfarouk/Competitive_Programming/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 | [2677-cousins-in-binary-tree-ii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2677-cousins-in-binary-tree-ii) |
@@ -95,6 +96,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0098-validate-binary-search-tree](https://github.com/sedfarouk/Competitive_Programming/tree/master/0098-validate-binary-search-tree) |
 | [0399-evaluate-division](https://github.com/sedfarouk/Competitive_Programming/tree/master/0399-evaluate-division) |
 | [0766-flatten-a-multilevel-doubly-linked-list](https://github.com/sedfarouk/Competitive_Programming/tree/master/0766-flatten-a-multilevel-doubly-linked-list) |
+| [0988-flip-equivalent-binary-trees](https://github.com/sedfarouk/Competitive_Programming/tree/master/0988-flip-equivalent-binary-trees) |
 | [1030-smallest-string-starting-from-leaf](https://github.com/sedfarouk/Competitive_Programming/tree/master/1030-smallest-string-starting-from-leaf) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/sedfarouk/Competitive_Programming/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 | [2677-cousins-in-binary-tree-ii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2677-cousins-in-binary-tree-ii) |
@@ -103,6 +105,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/sedfarouk/Competitive_Programming/tree/master/0098-validate-binary-search-tree) |
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/sedfarouk/Competitive_Programming/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
+| [0988-flip-equivalent-binary-trees](https://github.com/sedfarouk/Competitive_Programming/tree/master/0988-flip-equivalent-binary-trees) |
 | [1030-smallest-string-starting-from-leaf](https://github.com/sedfarouk/Competitive_Programming/tree/master/1030-smallest-string-starting-from-leaf) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/sedfarouk/Competitive_Programming/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 | [2677-cousins-in-binary-tree-ii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2677-cousins-in-binary-tree-ii) |
