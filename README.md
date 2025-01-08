@@ -29,6 +29,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1016-subarray-sums-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1256-rank-transform-of-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1256-rank-transform-of-an-array) |
 | [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/sedfarouk/Competitive_Programming/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
+| [1524-string-matching-in-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1524-string-matching-in-an-array) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
 | [1694-make-sum-divisible-by-p](https://github.com/sedfarouk/Competitive_Programming/tree/master/1694-make-sum-divisible-by-p) |
 | [1775-design-an-ordered-stream](https://github.com/sedfarouk/Competitive_Programming/tree/master/1775-design-an-ordered-stream) |
@@ -78,6 +79,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1304-longest-happy-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/1304-longest-happy-string) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/sedfarouk/Competitive_Programming/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [1512-design-underground-system](https://github.com/sedfarouk/Competitive_Programming/tree/master/1512-design-underground-system) |
+| [1524-string-matching-in-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1524-string-matching-in-an-array) |
 | [1537-maximum-score-after-splitting-a-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/1537-maximum-score-after-splitting-a-string) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/sedfarouk/Competitive_Programming/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
 | [1923-sentence-similarity-iii](https://github.com/sedfarouk/Competitive_Programming/tree/master/1923-sentence-similarity-iii) |
@@ -314,4 +316,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0164-maximum-gap](https://github.com/sedfarouk/Competitive_Programming/tree/master/0164-maximum-gap) |
+## String Matching
+|  |
+| ------- |
+| [1524-string-matching-in-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1524-string-matching-in-an-array) |
 <!---LeetCode Topics End-->
