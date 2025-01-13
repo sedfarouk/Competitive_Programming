@@ -91,6 +91,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2465-shifting-letters-ii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2465-shifting-letters-ii) |
 | [2800-minimum-string-length-after-removing-substrings](https://github.com/sedfarouk/Competitive_Programming/tree/master/2800-minimum-string-length-after-removing-substrings) |
 | [3195-separate-black-and-white-balls](https://github.com/sedfarouk/Competitive_Programming/tree/master/3195-separate-black-and-white-balls) |
+| [3455-minimum-length-of-string-after-operations](https://github.com/sedfarouk/Competitive_Programming/tree/master/3455-minimum-length-of-string-after-operations) |
 ## Tree
 |  |
 | ------- |
@@ -167,6 +168,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2054-the-number-of-the-smallest-unoccupied-chair](https://github.com/sedfarouk/Competitive_Programming/tree/master/2054-the-number-of-the-smallest-unoccupied-chair) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/sedfarouk/Competitive_Programming/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2677-cousins-in-binary-tree-ii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2677-cousins-in-binary-tree-ii) |
+| [3455-minimum-length-of-string-after-operations](https://github.com/sedfarouk/Competitive_Programming/tree/master/3455-minimum-length-of-string-after-operations) |
 ## Sliding Window
 |  |
 | ------- |
@@ -195,6 +197,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0387-first-unique-character-in-a-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/0387-first-unique-character-in-a-string) |
 | [1502-construct-k-palindrome-strings](https://github.com/sedfarouk/Competitive_Programming/tree/master/1502-construct-k-palindrome-strings) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
+| [3455-minimum-length-of-string-after-operations](https://github.com/sedfarouk/Competitive_Programming/tree/master/3455-minimum-length-of-string-after-operations) |
 ## Sorting
 |  |
 | ------- |
