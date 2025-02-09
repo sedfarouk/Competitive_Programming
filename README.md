@@ -29,6 +29,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1002-maximum-width-ramp](https://github.com/sedfarouk/Competitive_Programming/tree/master/1002-maximum-width-ramp) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1256-rank-transform-of-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1256-rank-transform-of-an-array) |
+| [1364-tuple-with-same-product](https://github.com/sedfarouk/Competitive_Programming/tree/master/1364-tuple-with-same-product) |
 | [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/sedfarouk/Competitive_Programming/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 | [1524-string-matching-in-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1524-string-matching-in-an-array) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
@@ -162,6 +163,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0632-smallest-range-covering-elements-from-k-lists](https://github.com/sedfarouk/Competitive_Programming/tree/master/0632-smallest-range-covering-elements-from-k-lists) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1256-rank-transform-of-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1256-rank-transform-of-an-array) |
+| [1364-tuple-with-same-product](https://github.com/sedfarouk/Competitive_Programming/tree/master/1364-tuple-with-same-product) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/sedfarouk/Competitive_Programming/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
 | [1502-construct-k-palindrome-strings](https://github.com/sedfarouk/Competitive_Programming/tree/master/1502-construct-k-palindrome-strings) |
 | [1512-design-underground-system](https://github.com/sedfarouk/Competitive_Programming/tree/master/1512-design-underground-system) |
@@ -201,6 +203,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0387-first-unique-character-in-a-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/0387-first-unique-character-in-a-string) |
+| [1364-tuple-with-same-product](https://github.com/sedfarouk/Competitive_Programming/tree/master/1364-tuple-with-same-product) |
 | [1502-construct-k-palindrome-strings](https://github.com/sedfarouk/Competitive_Programming/tree/master/1502-construct-k-palindrome-strings) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/sedfarouk/Competitive_Programming/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
