@@ -6,7 +6,7 @@ class Solution:
 
         for i in range(n):
             diff = nums[i] - i
-            ans += hashmap[str(diff)]
-            hashmap[str(diff)] += 1
+            ans += hashmap[diff]
+            hashmap[diff] += 1
         
         return n * (n - 1) // 2 - ans
