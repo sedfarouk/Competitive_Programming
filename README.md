@@ -40,6 +40,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2170-count-number-of-maximum-bitwise-or-subsets](https://github.com/sedfarouk/Competitive_Programming/tree/master/2170-count-number-of-maximum-bitwise-or-subsets) |
 | [2176-parallel-courses-iii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2176-parallel-courses-iii) |
 | [2358-number-of-ways-to-split-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/2358-number-of-ways-to-split-array) |
+| [2448-count-number-of-bad-pairs](https://github.com/sedfarouk/Competitive_Programming/tree/master/2448-count-number-of-bad-pairs) |
 | [2465-shifting-letters-ii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2465-shifting-letters-ii) |
 | [2488-divide-intervals-into-minimum-number-of-groups](https://github.com/sedfarouk/Competitive_Programming/tree/master/2488-divide-intervals-into-minimum-number-of-groups) |
 | [2616-maximal-score-after-applying-k-operations](https://github.com/sedfarouk/Competitive_Programming/tree/master/2616-maximal-score-after-applying-k-operations) |
@@ -129,6 +130,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0670-maximum-swap](https://github.com/sedfarouk/Competitive_Programming/tree/master/0670-maximum-swap) |
 | [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
+| [2448-count-number-of-bad-pairs](https://github.com/sedfarouk/Competitive_Programming/tree/master/2448-count-number-of-bad-pairs) |
 ## Binary Search
 |  |
 | ------- |
@@ -174,6 +176,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/sedfarouk/Competitive_Programming/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [2054-the-number-of-the-smallest-unoccupied-chair](https://github.com/sedfarouk/Competitive_Programming/tree/master/2054-the-number-of-the-smallest-unoccupied-chair) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/sedfarouk/Competitive_Programming/tree/master/2059-unique-length-3-palindromic-subsequences) |
+| [2448-count-number-of-bad-pairs](https://github.com/sedfarouk/Competitive_Programming/tree/master/2448-count-number-of-bad-pairs) |
 | [2677-cousins-in-binary-tree-ii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2677-cousins-in-binary-tree-ii) |
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/sedfarouk/Competitive_Programming/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
 | [3455-minimum-length-of-string-after-operations](https://github.com/sedfarouk/Competitive_Programming/tree/master/3455-minimum-length-of-string-after-operations) |
@@ -207,6 +210,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1502-construct-k-palindrome-strings](https://github.com/sedfarouk/Competitive_Programming/tree/master/1502-construct-k-palindrome-strings) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/sedfarouk/Competitive_Programming/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
+| [2448-count-number-of-bad-pairs](https://github.com/sedfarouk/Competitive_Programming/tree/master/2448-count-number-of-bad-pairs) |
 | [3455-minimum-length-of-string-after-operations](https://github.com/sedfarouk/Competitive_Programming/tree/master/3455-minimum-length-of-string-after-operations) |
 ## Sorting
 |  |
