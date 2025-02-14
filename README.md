@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1256-rank-transform-of-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1256-rank-transform-of-an-array) |
 | [1364-tuple-with-same-product](https://github.com/sedfarouk/Competitive_Programming/tree/master/1364-tuple-with-same-product) |
 | [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/sedfarouk/Competitive_Programming/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
+| [1477-product-of-the-last-k-numbers](https://github.com/sedfarouk/Competitive_Programming/tree/master/1477-product-of-the-last-k-numbers) |
 | [1524-string-matching-in-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1524-string-matching-in-an-array) |
 | [1620-check-if-array-pairs-are-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1620-check-if-array-pairs-are-divisible-by-k) |
 | [1694-make-sum-divisible-by-p](https://github.com/sedfarouk/Competitive_Programming/tree/master/1694-make-sum-divisible-by-p) |
@@ -130,6 +131,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0670-maximum-swap](https://github.com/sedfarouk/Competitive_Programming/tree/master/0670-maximum-swap) |
 | [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
+| [1477-product-of-the-last-k-numbers](https://github.com/sedfarouk/Competitive_Programming/tree/master/1477-product-of-the-last-k-numbers) |
 | [2448-count-number-of-bad-pairs](https://github.com/sedfarouk/Competitive_Programming/tree/master/2448-count-number-of-bad-pairs) |
 ## Binary Search
 |  |
@@ -142,6 +144,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/sedfarouk/Competitive_Programming/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1473-find-the-longest-substring-containing-vowels-in-even-counts](https://github.com/sedfarouk/Competitive_Programming/tree/master/1473-find-the-longest-substring-containing-vowels-in-even-counts) |
+| [1477-product-of-the-last-k-numbers](https://github.com/sedfarouk/Competitive_Programming/tree/master/1477-product-of-the-last-k-numbers) |
 | [1537-maximum-score-after-splitting-a-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/1537-maximum-score-after-splitting-a-string) |
 | [1694-make-sum-divisible-by-p](https://github.com/sedfarouk/Competitive_Programming/tree/master/1694-make-sum-divisible-by-p) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/sedfarouk/Competitive_Programming/tree/master/2059-unique-length-3-palindromic-subsequences) |
@@ -313,11 +316,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0146-lru-cache](https://github.com/sedfarouk/Competitive_Programming/tree/master/0146-lru-cache) |
 | [0729-my-calendar-i](https://github.com/sedfarouk/Competitive_Programming/tree/master/0729-my-calendar-i) |
+| [1477-product-of-the-last-k-numbers](https://github.com/sedfarouk/Competitive_Programming/tree/master/1477-product-of-the-last-k-numbers) |
 | [1512-design-underground-system](https://github.com/sedfarouk/Competitive_Programming/tree/master/1512-design-underground-system) |
 | [1775-design-an-ordered-stream](https://github.com/sedfarouk/Competitive_Programming/tree/master/1775-design-an-ordered-stream) |
 ## Data Stream
 |  |
 | ------- |
+| [1477-product-of-the-last-k-numbers](https://github.com/sedfarouk/Competitive_Programming/tree/master/1477-product-of-the-last-k-numbers) |
 | [1775-design-an-ordered-stream](https://github.com/sedfarouk/Competitive_Programming/tree/master/1775-design-an-ordered-stream) |
 ## Recursion
 |  |
