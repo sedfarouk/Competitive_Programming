@@ -76,6 +76,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0020-valid-parentheses](https://github.com/sedfarouk/Competitive_Programming/tree/master/0020-valid-parentheses) |
 | [0076-minimum-window-substring](https://github.com/sedfarouk/Competitive_Programming/tree/master/0076-minimum-window-substring) |
 | [0139-word-break](https://github.com/sedfarouk/Competitive_Programming/tree/master/0139-word-break) |
+| [0214-shortest-palindrome](https://github.com/sedfarouk/Competitive_Programming/tree/master/0214-shortest-palindrome) |
 | [0242-valid-anagram](https://github.com/sedfarouk/Competitive_Programming/tree/master/0242-valid-anagram) |
 | [0387-first-unique-character-in-a-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/0387-first-unique-character-in-a-string) |
 | [0394-decode-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/0394-decode-string) |
@@ -347,6 +348,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String Matching
 |  |
 | ------- |
+| [0214-shortest-palindrome](https://github.com/sedfarouk/Competitive_Programming/tree/master/0214-shortest-palindrome) |
 | [1524-string-matching-in-an-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/1524-string-matching-in-an-array) |
 ## Segment Tree
 |  |
@@ -356,4 +358,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0729-my-calendar-i](https://github.com/sedfarouk/Competitive_Programming/tree/master/0729-my-calendar-i) |
+## Rolling Hash
+|  |
+| ------- |
+| [0214-shortest-palindrome](https://github.com/sedfarouk/Competitive_Programming/tree/master/0214-shortest-palindrome) |
+## Hash Function
+|  |
+| ------- |
+| [0214-shortest-palindrome](https://github.com/sedfarouk/Competitive_Programming/tree/master/0214-shortest-palindrome) |
 <!---LeetCode Topics End-->
