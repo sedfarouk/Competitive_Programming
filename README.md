@@ -196,6 +196,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0042-trapping-rain-water](https://github.com/sedfarouk/Competitive_Programming/tree/master/0042-trapping-rain-water) |
 | [0139-word-break](https://github.com/sedfarouk/Competitive_Programming/tree/master/0139-word-break) |
+| [0836-race-car](https://github.com/sedfarouk/Competitive_Programming/tree/master/0836-race-car) |
 | [1488-sort-integers-by-the-power-value](https://github.com/sedfarouk/Competitive_Programming/tree/master/1488-sort-integers-by-the-power-value) |
 | [2176-parallel-courses-iii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2176-parallel-courses-iii) |
 ## Graph
