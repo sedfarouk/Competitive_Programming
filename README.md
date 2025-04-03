@@ -46,6 +46,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2465-shifting-letters-ii](https://github.com/sedfarouk/Competitive_Programming/tree/master/2465-shifting-letters-ii) |
 | [2488-divide-intervals-into-minimum-number-of-groups](https://github.com/sedfarouk/Competitive_Programming/tree/master/2488-divide-intervals-into-minimum-number-of-groups) |
 | [2616-maximal-score-after-applying-k-operations](https://github.com/sedfarouk/Competitive_Programming/tree/master/2616-maximal-score-after-applying-k-operations) |
+| [3152-maximum-value-of-an-ordered-triplet-ii](https://github.com/sedfarouk/Competitive_Programming/tree/master/3152-maximum-value-of-an-ordered-triplet-ii) |
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/sedfarouk/Competitive_Programming/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
 ## Greedy
 |  |
