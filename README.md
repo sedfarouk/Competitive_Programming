@@ -135,6 +135,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0670-maximum-swap](https://github.com/sedfarouk/Competitive_Programming/tree/master/0670-maximum-swap) |
 | [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
 | [1477-product-of-the-last-k-numbers](https://github.com/sedfarouk/Competitive_Programming/tree/master/1477-product-of-the-last-k-numbers) |
+| [2050-count-good-numbers](https://github.com/sedfarouk/Competitive_Programming/tree/master/2050-count-good-numbers) |
 | [2448-count-number-of-bad-pairs](https://github.com/sedfarouk/Competitive_Programming/tree/master/2448-count-number-of-bad-pairs) |
 ## Binary Search
 |  |
@@ -333,6 +334,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0394-decode-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/0394-decode-string) |
+| [2050-count-good-numbers](https://github.com/sedfarouk/Competitive_Programming/tree/master/2050-count-good-numbers) |
 ## Binary Search Tree
 |  |
 | ------- |
