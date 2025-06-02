@@ -16,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0016-3sum-closest](https://github.com/sedfarouk/Competitive_Programming/tree/master/0016-3sum-closest) |
 | [0031-next-permutation](https://github.com/sedfarouk/Competitive_Programming/tree/master/0031-next-permutation) |
 | [0042-trapping-rain-water](https://github.com/sedfarouk/Competitive_Programming/tree/master/0042-trapping-rain-water) |
+| [0051-n-queens](https://github.com/sedfarouk/Competitive_Programming/tree/master/0051-n-queens) |
 | [0088-merge-sorted-array](https://github.com/sedfarouk/Competitive_Programming/tree/master/0088-merge-sorted-array) |
 | [0128-longest-consecutive-sequence](https://github.com/sedfarouk/Competitive_Programming/tree/master/0128-longest-consecutive-sequence) |
 | [0139-word-break](https://github.com/sedfarouk/Competitive_Programming/tree/master/0139-word-break) |
@@ -315,6 +316,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Backtracking
 |  |
 | ------- |
+| [0051-n-queens](https://github.com/sedfarouk/Competitive_Programming/tree/master/0051-n-queens) |
 | [1030-smallest-string-starting-from-leaf](https://github.com/sedfarouk/Competitive_Programming/tree/master/1030-smallest-string-starting-from-leaf) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/sedfarouk/Competitive_Programming/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
 | [1819-construct-the-lexicographically-largest-valid-sequence](https://github.com/sedfarouk/Competitive_Programming/tree/master/1819-construct-the-lexicographically-largest-valid-sequence) |
