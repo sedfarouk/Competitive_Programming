@@ -59,6 +59,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/sedfarouk/Competitive_Programming/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 | [1304-longest-happy-string](https://github.com/sedfarouk/Competitive_Programming/tree/master/1304-longest-happy-string) |
 | [1502-construct-k-palindrome-strings](https://github.com/sedfarouk/Competitive_Programming/tree/master/1502-construct-k-palindrome-strings) |
+| [1529-max-difference-you-can-get-from-changing-an-integer](https://github.com/sedfarouk/Competitive_Programming/tree/master/1529-max-difference-you-can-get-from-changing-an-integer) |
 | [2095-minimum-number-of-swaps-to-make-the-string-balanced](https://github.com/sedfarouk/Competitive_Programming/tree/master/2095-minimum-number-of-swaps-to-make-the-string-balanced) |
 | [2488-divide-intervals-into-minimum-number-of-groups](https://github.com/sedfarouk/Competitive_Programming/tree/master/2488-divide-intervals-into-minimum-number-of-groups) |
 | [2616-maximal-score-after-applying-k-operations](https://github.com/sedfarouk/Competitive_Programming/tree/master/2616-maximal-score-after-applying-k-operations) |
@@ -138,6 +139,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0670-maximum-swap](https://github.com/sedfarouk/Competitive_Programming/tree/master/0670-maximum-swap) |
 | [0912-random-pick-with-weight](https://github.com/sedfarouk/Competitive_Programming/tree/master/0912-random-pick-with-weight) |
 | [1477-product-of-the-last-k-numbers](https://github.com/sedfarouk/Competitive_Programming/tree/master/1477-product-of-the-last-k-numbers) |
+| [1529-max-difference-you-can-get-from-changing-an-integer](https://github.com/sedfarouk/Competitive_Programming/tree/master/1529-max-difference-you-can-get-from-changing-an-integer) |
 | [2050-count-good-numbers](https://github.com/sedfarouk/Competitive_Programming/tree/master/2050-count-good-numbers) |
 | [2448-count-number-of-bad-pairs](https://github.com/sedfarouk/Competitive_Programming/tree/master/2448-count-number-of-bad-pairs) |
 ## Binary Search
