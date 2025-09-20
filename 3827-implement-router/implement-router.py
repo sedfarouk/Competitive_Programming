@@ -3,7 +3,7 @@ class Router:
     def __init__(self, memoryLimit: int):
         self.packets = deque()
         self.timestamps = deque()
-        self.packets_map = defaultdict(set)
+        self.unique_packets = set()
         self.dest_map = defaultdict(deque)
         self.MAX_LIMIT = memoryLimit
 
@@ -12,20 +12,22 @@ class Router:
         src, dest, time = self.packets.popleft()
         self.timestamps.popleft()
         self.dest_map[dest].popleft()
-        self.packets_map[time].remove((src, dest))
+        self.unique_packets.remove((src, dest, time))
 
         return [src, dest, time]
 
     def addPacket(self, source: int, destination: int, timestamp: int) -> bool:
-        if (source, destination) in self.packets_map[timestamp]:
+        new_packet = (source, destination, timestamp)
+
+        if new_packet in self.unique_packets:
             return False
 
         if len(self.packets) == self.MAX_LIMIT:
             self.removePacket()
             
-        self.packets.append((source, destination, timestamp))
+        self.packets.append(new_packet)
         self.timestamps.append(timestamp)
-        self.packets_map[timestamp].add((source, destination))
+        self.unique_packets.add((source, destination, timestamp))
         self.dest_map[destination].append(timestamp)
 
         return True
