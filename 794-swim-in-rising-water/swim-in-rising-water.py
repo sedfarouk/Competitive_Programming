@@ -2,7 +2,6 @@ class Solution:
     def swimInWater(self, grid: List[List[int]]) -> int:
         n, m = len(grid), len(grid[0])
         dirs = [(0, 1), (-1, 0), (1, 0), (0, -1)]
-        vis = set()
         heap = [(grid[0][0], 0, 0)]
 
         def inbounds(r, c):
@@ -17,6 +16,6 @@ class Solution:
             for dr, dc in dirs:
                 nr, nc = i + dr, j + dc
 
-                if inbounds(nr, nc) and (nr, nc) not in vis:
+                if inbounds(nr, nc) and grid[nr][nc] != -1:
                     heappush(heap, (max(mx, grid[nr][nc]), nr, nc))
-                    vis.add((nr, nc))
+                    grid[nr][nc] = -1
