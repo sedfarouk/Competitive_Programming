@@ -4,8 +4,7 @@ class Solution:
         s = sum(power)
         mx = 0
 
-        for num in power:
-            h[num] += num
+        for num in power: h[num] += num
 
         power = sorted(list(h.keys()))
 
@@ -16,12 +15,6 @@ class Solution:
 
             ans = dp(i + 1)
             j = i + 1
-            while j < len(power) and power[j] - power[i] <= 2:
-                j += 1
-
-            return max(ans, dp(j) + h[power[i]])
+            return max(ans, dp(bisect_right(power, power[i] + 2)) + h[power[i]])
 
         return dp(0)
-
-
-        
