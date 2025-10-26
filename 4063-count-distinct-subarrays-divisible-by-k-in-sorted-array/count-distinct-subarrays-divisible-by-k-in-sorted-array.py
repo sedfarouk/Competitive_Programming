@@ -1,5 +1,8 @@
 class Solution:
     def numGoodSubarrays(self, nums: List[int], k: int) -> int:
+        # Add all valid and invalid subarrays (duplicates)
+        # then de-duplicate the ans by removing duplicate subarrays
+
         ans = curr = 0
         h = defaultdict(int)
         h[0] = 1
