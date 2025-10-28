@@ -1,14 +1,12 @@
 class Solution:
     def countValidSelections(self, nums: List[int]) -> int:
-        pref = [0]
+        tot = sum(nums)
+        ans = curr = 0
 
-        for num in nums:
-            pref.append(pref[-1] + num)
-
-        ans = 0
         for i in range(len(nums)):
             if not nums[i]:
-                ans += 0 <= (pref[i + 1] - (pref[-1] - pref[i])) <= 1
-                ans += -1 <= (pref[i + 1] - (pref[-1] - pref[i])) <= 0
+                ans += 0 <= 2 * curr - tot <= 1
+                ans += -1 <= 2 * curr - tot <= 0
+            curr += nums[i]
 
         return ans
