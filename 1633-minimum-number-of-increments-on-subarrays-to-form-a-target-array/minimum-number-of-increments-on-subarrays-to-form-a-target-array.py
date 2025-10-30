@@ -5,11 +5,11 @@ class Solution:
 
         # COMPARE CONSECUTIVE ELEMENTS
         for i in range(1, n):
-            ans += max(0, target[i] - target[i - 1])
+            if target[i] > target[i - 1]:
+                ans += target[i] - target[i - 1]
         return ans
 
         # MONOTONIC STACKS
-
         # stack = []
         # prevSmaller = [-1] * n
         # for i in range(n - 1, -1, -1):
