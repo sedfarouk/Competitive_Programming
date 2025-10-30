@@ -14,19 +14,21 @@ class Solution:
         def inbounds(r, c):
             return 0 <= r < n and 0 <= c < m
 
-        def dfs(r, c, vis):
+        def dfs(r, c, p):
             ans = 0
             for dr, dc in dirs:
                 nr, nc = dr + r, dc + c
 
-                if (nr, nc) not in vis and inbounds(nr, nc):
+                if inbounds(nr, nc) and grid[nr][nc] != -1:
                     if grid[nr][nc] == 2:
-                        ans += len(vis) == p
+                        ans += not p
                     elif not grid[nr][nc]:
-                        ans += dfs(nr, nc, vis.union(set([(nr, nc)])))
+                        grid[nr][nc] = -1
+                        ans += dfs(nr, nc, p - 1)
+                        grid[nr][nc] = 0
             return ans
 
-        return dfs(x, y, set())
+        return dfs(x, y, p)
 
             
         
