@@ -1,5 +1,9 @@
 class Solution:
     def maximalRectangle(self, matrix: List[List[str]]) -> int:
+        # MONOTONIC STACKS
+        # Builds on Largest Rectangle in Histogram problem (coincidentally the previous problem before this, lol)
+        # Combination of 2 techniques; Row-wise cumulative sum && Monotonic stacks
+
         n, m = len(matrix), len(matrix[0])
 
         ans = 0
