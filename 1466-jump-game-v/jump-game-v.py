@@ -20,7 +20,6 @@ class Solution:
         res = 0
         for i in range(len(arr)):
             res = max(res, dp(i) + 1)
-            print(res)
 
         return res
         
