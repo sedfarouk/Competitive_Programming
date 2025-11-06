@@ -31,19 +31,22 @@ class Solution:
                 dfs(i)
 
         ans = []
-        non_op = set()
+        non_op = [False] * c
         for t, st in queries:
+            st = st - 1
             if t == 1:
-                if st - 1 not in non_op:
-                    ans.append(st)
+                if not non_op[st]:
+                    ans.append(st + 1)
                     continue
-                heap = heaps[indices[st - 1]]
-                while heap and heap[0] in non_op:
+
+                heap = heaps[indices[st]]
+                while heap and non_op[heap[0]]:
                     heappop(heap)
+                    
                 if heap: ans.append(heap[0] + 1)
                 else: ans.append(-1)
             else:
-                non_op.add(st - 1)
+                non_op[st] = True
 
         return ans
 
