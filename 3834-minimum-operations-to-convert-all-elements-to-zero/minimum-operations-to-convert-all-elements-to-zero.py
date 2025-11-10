@@ -1,27 +1,18 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         n = len(nums)
+        ans = 0
 
         stk = []
-        nextSmaller = [n] * n
+        for num in nums:
+            while stk and stk[-1] > num:
+                stk.pop()
 
-        for i in range(n):
-            while stk and nums[stk[-1]] > nums[i]:
-                nextSmaller[stk.pop()] = i
-            stk.append(i)
-
-        indices = defaultdict(list)
-        for i in range(n):
-            if nums[i] > 0: indices[nums[i]].append(i)
-
-        ans = 0
-        for val in indices.values():
-            cnt = 1
-            for i in range(len(val) - 1):
-                if nextSmaller[val[i]] < val[i + 1]:
-                    cnt += 1
-
-            ans += cnt
+            if num == 0:
+                continue
+            if not stk or stk[-1] < num:
+                ans += 1
+                stk.append(num)
 
         return ans
 
