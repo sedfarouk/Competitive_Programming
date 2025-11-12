@@ -3,7 +3,7 @@ class Solution:
         n = len(locations)
         MOD = 10 ** 9 + 7
 
-        @lru_cache(None)
+        @cache
         def dp(idx, f):
             ans = int(idx == finish)
             for i in range(n):
