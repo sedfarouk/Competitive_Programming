@@ -1,36 +1,70 @@
 class Solution:
-    def maxCollectedFruits(self, fruits: List[List[int]]) -> int:
-        n = len(fruits)
-        ans = fruits[-1][0] + fruits[0][-1]
+    def maxCollectedFruits(self, mat: List[List[int]]) -> int:
+        self.n = len(mat)
+        self.memo = [[-1] * self.n for _ in range(self.n)]
 
-        for i in range(n):
-            ans += fruits[i][i]
-            fruits[i][i] = 0
-
-        def inbound(r, c):
-            return 0 <= r < n and 0 <= c < n
-
-        def canMove(steps, r, c):
-            diag = min(n - r - 1, n - c - 1)
-            down, right = n - (r + diag) - 1, n - (c + diag) - 1
-            totalMoves = steps + diag + down + right + 1
-            return totalMoves <= n - 1
-
-        dirs = [(-1, 1), (0, 1), (1, 1), (1, -1), (1, 0)]
-        @cache
-        def dp(r, c, steps):
-            if r == n - 1 and c == n - 1:
+        def dfs3(row, col):
+            if row < 0 or col < 0 or row >= self.n or col >= self.n:
                 return 0
-            
-            ans = 0
-            for dr, dc in dirs:
-                nr, nc = dr + r, dc + c
 
-                if inbound(nr, nc) and canMove(steps, nr, nc):
-                    ans = max(ans, dp(nr, nc, steps + 1) + fruits[nr][nc])
-            return ans
+            if self.memo[row][col] != -1:
+                return self.memo[row][col]
 
-        res = dp(n - 1, 0, 0) + dp(0, n - 1, 0)
-        dp.cache_clear()
-        return ans + res
-        
+            val = mat[row][col]
+            res = 0
+
+            # row = i, col = j
+            if row == col:
+                res = max(res, dfs3(row + 1, col + 1))
+            elif row - 1 == col:
+                res = max(res,
+                          dfs3(row + 1, col + 1),
+                          dfs3(row, col + 1))
+            else:
+                res = max(res,
+                          dfs3(row + 1, col + 1),
+                          dfs3(row, col + 1),
+                          dfs3(row - 1, col + 1))
+
+            self.memo[row][col] = val + res
+            return self.memo[row][col]
+
+        def dfs2(row, col):
+            if row < 0 or col < 0 or row >= self.n or col >= self.n:
+                return 0
+
+            if self.memo[row][col] != -1:
+                return self.memo[row][col]
+
+            val = mat[row][col]
+            res = 0
+
+            if row == col:
+                res = max(res, dfs2(row + 1, col + 1))
+            elif row == col - 1:
+                res = max(res,
+                          dfs2(row + 1, col + 1),
+                          dfs2(row + 1, col))
+            else:
+                res = max(res,
+                          dfs2(row + 1, col + 1),
+                          dfs2(row + 1, col),
+                          dfs2(row + 1, col - 1))
+
+            self.memo[row][col] = val + res
+            return self.memo[row][col]
+
+        total = 0
+
+        # child - 1
+        # he will eat all diagonal fruits, so set them to 0 
+        for i in range(self.n):
+            total += mat[i][i]
+            mat[i][i] = 0
+
+        # child - 2
+        total += dfs3(self.n - 1, 0)
+        # child - 3
+        total += dfs2(0, self.n - 1)
+
+        return total
