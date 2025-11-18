@@ -4,10 +4,7 @@ class Solution:
 
         i = 0
         while i < n - 1:
-            if bits[i]:
-                i += 2
-            else:
-                i += 1
+            i += bits[i] + 1
             
         return i == n - 1
         
