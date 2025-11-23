@@ -1,19 +1,10 @@
 class Solution:
     def countPalindromicSubsequence(self, s: str) -> int:
-        freq = Counter(s)
-        prefCnt = defaultdict(int)
-        seen = set()
         ans = 0
 
-        for i in range(len(s)):
-            for c in 'abcdefghijklmnopqrstuvwxyz':
-                if prefCnt[c] and freq[c] - prefCnt[c] - (s[i] == c):
-                    curr = c + s[i]
-                    if curr not in seen:
-                        ans += 1
-                        seen.add(curr)
-
-            prefCnt[s[i]] += 1
+        for c in 'abcdefghijklmnopqrstuvwxyz':
+            first, last = s.find(c), s.rfind(c)
+            if first >= 0: ans += len(set(s[first + 1:last]))
 
         return ans
 
