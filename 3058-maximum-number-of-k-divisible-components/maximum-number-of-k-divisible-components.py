@@ -9,13 +9,11 @@ class Solution:
         def dfs(root, par):
             for nei in tree[root]:
                 if nei != par:
-                    if not vis[nei]: values[root] += dfs(nei, root)
-                    else: values[root] += values[nei]
-
+                    values[root] += dfs(nei, root)
+                    
             ans[-1] += int(values[root] % k == 0)
             return values[root]
 
         ans = [0]
-        vis = [False] * n
         dfs(0, -1)
         return ans[-1]
