@@ -7,18 +7,15 @@ class Solution:
             tree[v].append(u)
 
         def dfs(root, par):
-            if root in memo:
-                return memo[root]
-
             for nei in tree[root]:
                 if nei != par:
-                    values[root] += dfs(nei, root)
+                    if not vis[nei]: values[root] += dfs(nei, root)
+                    else: values[root] += values[nei]
 
             ans[-1] += int(values[root] % k == 0)
-            memo[root] = values[root]
-            return memo[root]
+            return values[root]
 
         ans = [0]
-        memo = {}
+        vis = [False] * n
         dfs(0, -1)
         return ans[-1]
