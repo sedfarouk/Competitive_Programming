@@ -6,14 +6,23 @@ class Solution:
             tree[u].append(v)
             tree[v].append(u)
 
-        def dfs(root, par):
-            for nei in tree[root]:
-                if nei != par:
-                    values[root] += dfs(nei, root)
-                    
-            ans[-1] += int(values[root] % k == 0)
-            return values[root]
+        ans = 0
+        stack = [(0, -1, 0)]
 
-        ans = [0]
-        dfs(0, -1)
-        return ans[-1]
+        while stack:
+            st, par, state = stack.pop()
+            
+            if not state:
+                stack.append((st, par, 1))
+                for nei in tree[st]:
+                    if nei != par:
+                        stack.append((nei, st, 0))
+            
+            else:
+                for nei in tree[st]:
+                    if nei != par:
+                        values[st] += values[nei]
+
+                ans += int(values[st] % k == 0)
+
+        return ans
