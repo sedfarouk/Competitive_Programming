@@ -6,13 +6,18 @@ class Solution:
         def inbound(r, c):
             return 0 <= r < n and 0 <= c < m
         
-        def dfs(r, c):
-            for dr, dc in dirs:
-                nr, nc = dr + r, dc + c
+        def dfs(x, y):
+            stk = [(x, y)]
 
-                if inbound(nr, nc) and grid[nr][nc] == '1':
-                    grid[nr][nc] = '0'
-                    dfs(nr, nc) 
+            while stk:
+                r, c = stk.pop()
+
+                for dr, dc in dirs:
+                    nr, nc = dr + r, dc + c
+
+                    if inbound(nr, nc) and grid[nr][nc] == '1':
+                        grid[nr][nc] = '0'
+                        stk.append((nr, nc))
 
         ans = 0
         for i in range(n):
