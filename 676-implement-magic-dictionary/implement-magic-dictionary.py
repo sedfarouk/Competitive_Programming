@@ -26,6 +26,7 @@ class Trie:
                 self.cnt += int(word[i] != ch)
 
                 if self.cnt < 2 and dfs(root.children[ch], i + 1):
+                    self.cnt = 0
                     return True
 
                 self.cnt -= int(word[i] != ch)
@@ -44,7 +45,6 @@ class MagicDictionary:
             self.trie.add(word)
 
     def search(self, searchWord: str) -> bool:
-        self.trie.cnt = 0
         return self.trie.searchMagic(searchWord)
 
 # Your MagicDictionary object will be instantiated and called as such:
