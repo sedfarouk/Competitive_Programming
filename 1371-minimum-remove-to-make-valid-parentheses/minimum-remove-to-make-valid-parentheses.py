@@ -12,5 +12,12 @@ class Solution:
                 if stk and stk[-1][0] == '(': stk.pop()
                 else: stk.append((ch, i))
 
-        invalid = set([x[1] for x in stk])
-        return "".join([s[i] for i in range(len(s)) if i not in invalid])
+        ans = []
+        stk.reverse()
+        for i in range(len(s)):
+            if stk and i == stk[-1][1]:
+                stk.pop()
+                continue
+            ans.append(s[i])
+
+        return "".join(ans)
