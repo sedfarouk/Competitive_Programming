@@ -8,7 +8,11 @@ class Solution:
 
         mn, mx = min(u), max(u)
         fmn, fmx = freqs.count(mn), freqs.count(mx)
-        if (mn == 1 and (fmn == 1 or fmn == len(freqs))) or (mx - mn == 1 and fmx == 1 and fmn == len(freqs) - 1):
+        
+        if mn == 1 and (fmn == 1 or fmn == len(freqs)):
+            return True
+
+        if mx - mn == 1 and fmx == 1 and fmn == len(freqs) - 1:
             return True
         
         return len(u) == len(freqs) == 1
