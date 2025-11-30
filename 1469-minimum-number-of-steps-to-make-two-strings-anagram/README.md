@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram">1469. Minimum Number of Steps to Make Two Strings Anagram</a></h2><h3>Medium</h3><hr><p>You are given two strings of the same length <code>s</code> and <code>t</code>. In one step you can choose <strong>any character</strong> of <code>t</code> and replace it with <strong>another character</strong>.</p>
+<h2><a href="https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram">Minimum Number of Steps to Make Two Strings Anagram</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You are given two strings of the same length <code>s</code> and <code>t</code>. In one step you can choose <strong>any character</strong> of <code>t</code> and replace it with <strong>another character</strong>.</p>
 
 <p>Return <em>the minimum number of steps</em> to make <code>t</code> an anagram of <code>s</code>.</p>
 
