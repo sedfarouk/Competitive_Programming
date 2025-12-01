@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/sort-integers-by-the-power-value">1488. Sort Integers by The Power Value</a></h2><h3>Medium</h3><hr><p>The power of an integer <code>x</code> is defined as the number of steps needed to transform <code>x</code> into <code>1</code> using the following steps:</p>
+<h2><a href="https://leetcode.com/problems/sort-integers-by-the-power-value">Sort Integers by The Power Value</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>The power of an integer <code>x</code> is defined as the number of steps needed to transform <code>x</code> into <code>1</code> using the following steps:</p>
 
 <ul>
 	<li>if <code>x</code> is even then <code>x = x / 2</code></li>
