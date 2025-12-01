@@ -1,12 +1,13 @@
 class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
+        @lru_cache        
         def findPower(x):
-            steps = 0
-            while x != 1:
-                if x % 2: x = x * 3 + 1
-                else: x //= 2
-                steps += 1
-            return steps
+            if x == 1:
+                return 0
+
+            if x % 2:
+                return findPower(x * 3 + 1) + 1
+            return findPower(x // 2) + 1
 
         heap = []
         for i in range(lo, hi + 1):
