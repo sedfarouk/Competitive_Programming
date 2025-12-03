@@ -1,7 +1,8 @@
 class Solution:
     def myPow(self, x: float, n: int) -> float:
         if n == 0: return 1
-        
+
+        @cache
         def pow(base, exp):
             if exp == 1:
                 return base
@@ -12,6 +13,7 @@ class Solution:
             return y * y
 
         res = pow(x, abs(n))
+        pow.cache_clear()
         if n < 0:
             return 1/res
         return res
