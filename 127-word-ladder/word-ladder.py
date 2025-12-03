@@ -9,7 +9,7 @@ class Solution:
                 neighbours[pat].append(word)
 
         queue = deque([(beginWord, 1)])
-        vis = set([beginWord])
+        vis = set()
         while queue:
             word, cnt = queue.popleft()
 
@@ -20,9 +20,12 @@ class Solution:
             for i in range(l):
                 pat = word[:i] + '*' + word[i+1:]
 
+                if pat in vis: 
+                    continue
+
                 for nei in neighbours[pat]:
                     if nei not in vis:
-                        vis.add(nei)
                         queue.append((nei, cnt + 1))
+                vis.add(pat)
 
         return 0
