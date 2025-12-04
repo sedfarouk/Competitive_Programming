@@ -1,15 +1,12 @@
 class Solution:
     def validPalindrome(self, s: str) -> bool:
-        @cache
-        def dp(l, r, used=False):
-            if l > r:
-                return True
+        used = False
+        l, r = 0, len(s) - 1
 
-            if s[l] == s[r]:
-                return dp(l + 1, r - 1, used)
-            if used:
-                return False
+        while l <= r:
+            if s[l] != s[r]:
+                first, second = s[l+1:r+1], s[l:r]
+                return first == first[::-1] or second == second[::-1]
+            l += 1; r -= 1
 
-            return dp(l + 1, r, True) or dp(l, r - 1, True)
-
-        return dp(0, len(s) - 1)
+        return True
