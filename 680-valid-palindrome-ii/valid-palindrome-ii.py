@@ -1,5 +1,6 @@
 class Solution:
     def validPalindrome(self, s: str) -> bool:
+        @cache
         def dp(l, r, used=False):
             if l > r:
                 return True
