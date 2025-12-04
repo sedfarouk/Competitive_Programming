@@ -1,50 +1,25 @@
 class Solution:
     def calculate(self, s: str) -> int:
-        opStack, numStack = [], []
-
-        def evalExp(x, y, op):
-            if op == '+':
-                return x + y
-            if op == '-':
-                return x - y
-            if op == '*':
-                return x * y
-            if op == '/':
-                d = abs(x) // y
-                return -d if x < 0 else d  
-
-        bodmas = {'+': ('*', '/', '+'), '*': ('/', '*'), '/': ('/', '*'), '-': ('+', '*', '/')}
-
-        n = len(s)
+        s += '+'
+        stack = []
         curr = 0
-        for i in range(n):
-            if s[i] == ' ':
-                continue
+        last_op = '+'
 
+        for i in range(len(s)):
             if s[i].isdigit():
-                curr = curr * 10 + (int(s[i]) if curr >= 0 else -int(s[i]))
+                curr = curr * 10 + int(s[i])
 
-                if i > 0 and s[i - 1] == '-':
-                    curr *= -1
-
-            else:
-                numStack.append(curr)
+            elif s[i] in '+*/-':
+                if last_op == '+':
+                    stack.append(curr)
+                elif last_op == '-':
+                    stack.append(-curr)
+                elif last_op == '*':
+                    stack.append(stack.pop() * curr)
+                else:
+                    stack.append(int(stack.pop() / curr))
+                
+                last_op = s[i]
                 curr = 0
 
-                while opStack and opStack[-1] in bodmas[s[i]]:
-                    num2, num1 = numStack.pop(), numStack.pop()
-                    op = opStack.pop()
-                    numStack.append(evalExp(num1, num2, op))
-                opStack.append(s[i] if s[i] != '-' else '+')
-
-        numStack.append(curr)
-        
-        while opStack:
-            num2, num1 = numStack.pop(), numStack.pop()
-            op = opStack.pop()
-            numStack.append(evalExp(num1, num2, op))
-
-        return numStack.pop()
-
-                
-                    
+        return sum(stack)
