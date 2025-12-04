@@ -1,18 +1,14 @@
 class Solution:
     def validPalindrome(self, s: str) -> bool:
-        def checkPal(ptr):
-            used = False
-            l, r = 0, len(s) - 1
-            
-            while l <= r:
-                if s[l] == s[r]:
-                    l += 1; r -= 1
-                else:
-                    if used:
-                        return False
-                    l += 1 if ptr == 'l' else 0
-                    r -= 1 if ptr == 'r' else 0
-                    used = True
-            return True
-        
-        return checkPal("l") or checkPal("r")
+        def dp(l, r, used=False):
+            if l > r:
+                return True
+
+            if s[l] == s[r]:
+                return dp(l + 1, r - 1, used)
+            if used:
+                return False
+
+            return dp(l + 1, r, True) or dp(l, r - 1, True)
+
+        return dp(0, len(s) - 1)
