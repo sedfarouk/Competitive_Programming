@@ -8,20 +8,29 @@ class Solution:
         """
         Do not return anything, modify head in-place instead.
         """
-        refs = []
-        dummy = head
+        slow, fast = head, head.next
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
 
-        while dummy:
-            refs.append(dummy)
-            dummy = dummy.next
+        last_node = slow
+        slow = slow.next
+        head2 = last_node.next = None
+        while slow:
+            nxt = slow.next
+            slow.next = head2
+            head2 = slow
+            slow = nxt
 
-        l, r = 0, len(refs) - 1
-        while l < r:
-            refs[l].next = refs[r]
-            refs[r].next = refs[l + 1]
-            l += 1; r -= 1
+        head1 = head
+        while head1 and head2:
+            nxt1 = head1.next
+            head1.next = head2
+            head1 = nxt1
+            nxt2 = head2.next
+            head2.next = head1
+            head2 = nxt2
 
-        if l == r:
-            refs[l].next = None
-        else:
-            refs[r + 1].next = None
+        return head
+
+        
