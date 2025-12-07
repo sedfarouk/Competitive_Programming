@@ -8,7 +8,7 @@ class Solution:
 
         def validQueen(r, c):
             for dx, dy in dirs:
-                x, y = r + dx, c + dy
+                x, y = r, c
 
                 while inbound(x, y):
                     if board[x][y] == 'Q':
@@ -23,12 +23,10 @@ class Solution:
                 return
 
             for c in range(n):
-                board[r][c] = 'Q'
-
                 if validQueen(r, c):
+                    board[r][c] = 'Q'
                     backtrack(r + 1)
-                
-                board[r][c] = '.'
+                    board[r][c] = '.'
 
         ans = []
         backtrack(0)
