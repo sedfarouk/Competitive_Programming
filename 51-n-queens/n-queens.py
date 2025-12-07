@@ -1,35 +1,19 @@
 class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
         board = [['.'] * n for _ in range(n)]
+        dirs = [(1, 0), (0, 1), (1, 1), (-1, -1), (0, -1), (-1, 0), (-1, 1), (1, -1)]
+
+        def inbound(r, c):
+            return 0 <= r < n and 0 <= c < n
 
         def validQueen(r, c):
-            i, j = r + 1, c + 1
-            while i < n and j < n:
-                if board[i][j] == 'Q':
-                    return False
-                i += 1; j += 1
+            for dx, dy in dirs:
+                x, y = r + dx, c + dy
 
-            i, j = r - 1, c + 1
-            while i >= 0 and j < n:
-                if board[i][j] == 'Q':
-                    return False
-                i -= 1; j += 1
-
-            i, j = r + 1, c - 1
-            while i < n and j >= 0:
-                if board[i][j] == 'Q':
-                    return False
-                i += 1; j -= 1
-
-            i, j = r - 1, c - 1
-            while i >= 0 and j >= 0:
-                if board[i][j] == 'Q':
-                    return False
-                i -= 1; j -= 1
-
-            for i in range(n):
-                if (i != r and board[i][c] == 'Q') or (i != c and board[r][i] == 'Q'):
-                    return False
+                while inbound(x, y):
+                    if board[x][y] == 'Q':
+                        return False
+                    x += dx; y += dy
 
             return True
 
