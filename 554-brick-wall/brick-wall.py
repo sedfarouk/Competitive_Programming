@@ -1,7 +1,8 @@
 class Solution:
     def leastBricks(self, wall: List[List[int]]) -> int:
+        n = len(wall)
         freqs = defaultdict(int)
-        ans = len(wall)
+        interceptions = 0
 
         for row in wall:
             curr = 0
@@ -10,8 +11,8 @@ class Solution:
                 freqs[curr] += 1
         
         for v in freqs.values():
-            ans = min(ans, len(wall) - v)
+            interceptions = max(interceptions, v)
 
-        return ans
+        return n - interceptions
 
         
