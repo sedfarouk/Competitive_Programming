@@ -4,20 +4,20 @@ class MedianFinder:
         self.half2 = []
 
     def addNum(self, num: int) -> None:
-        heappush(self.half2, num)
+        heappush(self.half1, -num)
 
-        if self.half1 and self.half2 and self.half2[0] < -self.half1[0]:
-            val = heappop(self.half2)
+        if self.half2 and self.half2[0] < -self.half1[0]:
+            val = heappop(self.half1)
+            heappush(self.half2, -val)
+
+        if len(self.half1) > len(self.half2) + 1:
             heappush(self.half2, -heappop(self.half1))
-            heappush(self.half1, -val)
 
-        if len(self.half1) < (len(self.half1) + len(self.half2) + 1) // 2:
+        if len(self.half1) < len(self.half2):
             heappush(self.half1, -heappop(self.half2))
 
     def findMedian(self) -> float:
-        l1, l2 = len(self.half1), len(self.half2)
-
-        if (l1 + l2) % 2:
+        if len(self.half1) > len(self.half2):
             return -self.half1[0]
         return (-self.half1[0] + self.half2[0]) / 2
 
