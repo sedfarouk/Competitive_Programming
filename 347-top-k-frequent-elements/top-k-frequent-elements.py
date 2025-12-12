@@ -1,13 +1,14 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:        
         freqs = Counter(nums)
-        cntSort = [[] for _ in range(len(nums) + 1)]
+        cntSort = [[] for _ in range(max(freqs.values()) + 1)]
 
         for num, freq in freqs.items():
             cntSort[freq].append(num)
 
         ans = []
-        while len(ans) < k:
-            ans.extend(cntSort.pop())
+        for i in range(len(cntSort) - 1, -1, -1):
+            ans.extend(cntSort[i])
 
-        return ans
+            if len(ans) == k:
+                return ans
