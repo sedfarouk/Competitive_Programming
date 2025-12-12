@@ -6,7 +6,7 @@ class MedianFinder:
     def addNum(self, num: int) -> None:
         heappush(self.half2, num)
 
-        while self.half1 and self.half2 and self.half2[0] < -self.half1[0]:
+        if self.half1 and self.half2 and self.half2[0] < -self.half1[0]:
             val = heappop(self.half2)
             heappush(self.half2, -heappop(self.half1))
             heappush(self.half1, -val)
