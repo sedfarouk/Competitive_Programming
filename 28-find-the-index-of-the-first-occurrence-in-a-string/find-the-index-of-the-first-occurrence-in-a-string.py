@@ -1,34 +1,34 @@
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
-        MOD = (10 ** 9) + 7
-        base = 27 # instead of 26 to prevent hash values of 0
-        n, m = len(haystack), len(needle)
+        # Knuth-Morris-Pratt (KMP) Algorithm
+        # TC: Guaranteed O(n + m)
+        # SC: O(m)
+         
+        n, m = len(haystack),len(needle)
+        needleLps = [0] * m
 
-        if n < m:
-            return -1
+        i, j = 0, 1
+        while j < m:
+            if needle[i] == needle[j]:
+                needleLps[j] = i + 1
+                i += 1; j += 1
+            elif i == 0:
+                j += 1
+            else:
+                i = needleLps[i - 1]
 
-        def getAsc(ch):
-            return ord(ch) - 96
+        i = j = 0
+        while j < n:
+            if haystack[j] == needle[i]:
+                i += 1; j += 1
+            elif i == 0:
+                j += 1
+            else:
+                i = needleLps[i - 1]
 
-        needleHash = 0
-        for i in range(m):
-            needleHash = (needleHash * base + getAsc(needle[i])) % MOD
-
-        haystackHash = 0
-        constantFirst = base ** (m - 1)
-        for i in range(n):
-            if i >= m:
-                haystackHash -= getAsc(haystack[i - m]) * constantFirst
-
-            haystackHash = (haystackHash * base + getAsc(haystack[i])) % MOD
-
-            if i >= m - 1 and haystackHash == needleHash:
-                p, q = i - m + 1, 0
-                while q < m and haystack[p] == needle[q]:
-                    p += 1; q += 1
-
-                if q == m:
-                    return i - m + 1
-
+            if i == m:
+                return j - m
+        
         return -1
-            
+
+        
