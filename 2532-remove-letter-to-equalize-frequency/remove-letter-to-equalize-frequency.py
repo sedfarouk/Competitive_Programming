@@ -15,4 +15,4 @@ class Solution:
         if mx - mn == 1 and fmx == 1 and fmn == len(freqs) - 1:
             return True
         
-        return len(u) == len(freqs) == 1
+        return len(freqs) == 1
