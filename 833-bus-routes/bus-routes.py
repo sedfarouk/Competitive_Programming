@@ -30,7 +30,7 @@ class Solution:
                 for nei in graph[bus]:
                     if nei in vis:
                         continue
-                    vis.add(bus)
+                    vis.add(nei)
                     queue.append(nei)
             ans += 1
 
