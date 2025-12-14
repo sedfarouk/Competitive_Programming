@@ -19,7 +19,7 @@ class Trie:
     def search(self, word):
         curr = self.root
         
-        for ch in word[:-1]:
+        for ch in word:
             if ch not in curr.children:
                 return ""
 
