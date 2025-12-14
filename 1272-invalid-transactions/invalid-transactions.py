@@ -1,35 +1,33 @@
 class Solution:
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
-        n = len(transactions)
-        parsed = []
+        history = defaultdict(lambda: defaultdict(set))
+        invalid = []
 
-        for idx, transaction in enumerate(transactions):
-            name, time, amt, city = transaction.split(",")
-            parsed.append((name, int(time), int(amt), city, idx))
+        for trans in transactions:
+            name, time, amount, city = trans.split(",")
+            time, amount = int(time), int(amount)
 
-        parsed.sort(key = lambda x: x[1])
-        city_trans = defaultdict(lambda: defaultdict(deque))
-        invalid = [False] * n
+            if city not in history[time][name]:
+                history[time][name].add(city)
 
-        for name, time, amt, city, idx in parsed:
-            if amt > 1000:
-                invalid[idx] = True
+        for trans in transactions:
+            name, time, amount, city = trans.split(",")
+            time, amount = int(time), int(amount)
 
-            for other_city, name_maps in city_trans.items():
-                if other_city == city:
+            if amount > 1000:
+                invalid.append(trans)
+                continue
+
+            for t in range(time - 60, time + 61):
+                if t not in history:
                     continue
 
-                dq = name_maps[name]
+                if name not in history[t]:
+                    continue
 
-                while dq and time - dq[0][0] > 60:
-                    dq.popleft()
+                if len(history[t][name]) > 1 or next(iter(history[t][name])) != city:
+                    invalid.append(trans)
+                    break
 
-                if dq: invalid[idx] = True
-
-                for time2, idx2 in dq:
-                    invalid[idx2] = True
-
-            city_trans[city][name].append((time, idx))
-
-        return [transactions[x] for x in range(n) if invalid[x]]
+        return invalid
 
