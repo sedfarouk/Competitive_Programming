@@ -10,31 +10,24 @@ class Node:
 
 class Solution:
     def flatten(self, head: 'Optional[Node]') -> 'Optional[Node]':
-        def dfs(root):
-            if not root.next and not root.child:
-                return root
+        if not head:
+            return head
 
-            nxt = root.next
-            newHead = root
+        pseudoHead = Node(None, None, head, None)
+        self.flatten_dfs(pseudoHead, head)
 
-            while root.child:
-                newHead = dfs(root.child)
-                root.next = root.child
-                root.child.prev = root
-                root.child = None
-                
-            if not nxt:
-                return newHead
+        pseudoHead.next.prev = None
+        return pseudoHead.next
 
-            newHead.next = nxt
-            nxt.prev = newHead
+    def flatten_dfs(self, prev, curr):
+        if not curr:
+            return prev
 
-            return dfs(nxt)
+        curr.prev = prev
+        prev.next = curr
 
-        if not head: return None
-        dfs(head)
-        return head
-        
+        tempNext = curr.next
+        tail = self.flatten_dfs(curr, curr.child)
+        curr.child = None
+        return self.flatten_dfs(tail, tempNext)
 
-                
-            
