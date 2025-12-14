@@ -9,38 +9,32 @@ class Trie:
 
     def addWord(self, word):
         curr = self.root
+        built = True
 
-        for ch in word:
+        for idx, ch in enumerate(word):
             if ch not in curr.children:
                 curr.children[ch] = TrieNode()
+
+                if idx != len(word) - 1:
+                    built = False 
+
             curr = curr.children[ch]
+            
+            if idx != len(word) - 1:
+                built &= curr.end
+
         curr.end = True
-
-    def search(self, word):
-        curr = self.root
-        
-        for ch in word:
-            if ch not in curr.children:
-                return ""
-
-            curr = curr.children[ch]
-
-            if not curr.end:
-                return ""
-        
-        return word 
+        return word if built else ""
 
 
 class Solution:
     def longestWord(self, words: List[str]) -> str:
+        words.sort()
         res = ""
         trie = Trie()
 
         for word in words:
-            trie.addWord(word)
-
-        for word in words:
-            w = trie.search(word)
+            w = trie.addWord(word)
 
             if len(w) >= len(res):
                 if len(w) == len(res) and w < res:
