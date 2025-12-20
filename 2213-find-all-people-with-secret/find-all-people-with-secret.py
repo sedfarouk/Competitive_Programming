@@ -9,21 +9,22 @@ class Solution:
         for node in graph:
             graph[node].sort()
 
-        vis = set()
+        vis = [False] * n
         queue = [(0, 0), (0, firstPerson)]
         time = { i: float("inf") for i in range(n) }
         
         while queue:
             t1, q = heappop(queue)
             
-            if q not in vis:
-                vis.add(q)
+            if vis[q]:
+                continue
 
+            vis[q] = True
             for t2, nei in graph[q]:
-                if t2 >= t1 and t2 < time[nei] and nei not in vis:
+                if t2 >= t1 and t2 < time[nei] and not vis[nei]:
                     time[nei] = t2
                     heappush(queue, (t2, nei))
 
-        return list(vis)
+        return [i for i in range(n) if vis[i]]
             
 
