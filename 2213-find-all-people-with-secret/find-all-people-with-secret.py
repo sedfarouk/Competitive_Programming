@@ -4,10 +4,17 @@ class UnionFind:
         self.size = [1] * n
 
     def find(self, u):
-        if u == self.par[u]:
-            return u
-        self.par[u] = self.find(self.par[u])
-        return self.par[u]
+        root = u
+        while root != self.par[root]:
+            root = self.par[root]
+            
+        while u != root:
+            parent = self.par[u]
+            self.par[u] = root
+            u = parent
+
+        return root
+
 
     def union(self, u, v):
         rootX = self.find(u)
