@@ -15,7 +15,9 @@ class Solution:
         
         while queue:
             t1, q = heappop(queue)
-            vis.add(q)
+            
+            if q not in vis:
+                vis.add(q)
 
             for t2, nei in graph[q]:
                 if t2 >= t1 and t2 < time[nei] and nei not in vis:
