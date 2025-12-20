@@ -20,7 +20,11 @@ class Solution:
                 continue
 
             vis[q] = True
-            for t2, nei in graph[q]:
+            i = bisect_left(graph[q], (t1, -1))
+            
+            for j in range(i, len(graph[q])):
+                t2, nei = graph[q][j]
+
                 if t2 >= t1 and t2 < time[nei] and not vis[nei]:
                     time[nei] = t2
                     heappush(queue, (t2, nei))
