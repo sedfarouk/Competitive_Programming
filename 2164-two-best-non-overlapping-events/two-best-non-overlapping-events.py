@@ -2,15 +2,15 @@ class Solution:
     def maxTwoEvents(self, events: List[List[int]]) -> int:
         n = len(events)
         events.sort()
-        suff = [0]
+        starts = [s for s, _, _ in events]
+        suff = [0] * (n + 1)
 
         for i in range(n - 1, -1, -1):
-            suff.append(max(suff[-1], events[i][2]))
-        suff.reverse()
+            suff[i] = max(suff[i + 1], events[i][2])
 
         ans = 0
         for _, end, val in events:
-            ans = max(ans, val + suff[bisect_right(events, [end, float("inf")])])
+            ans = max(ans, val + suff[bisect_right(starts, end)])
 
         return ans        
         
