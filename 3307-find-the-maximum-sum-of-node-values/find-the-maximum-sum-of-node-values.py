@@ -10,10 +10,7 @@ class Solution:
             xor = (num ^ k)
             if xor >= num:
                 summ += (xor - num)
-
-                if (xor - num) <= minXor:
-                    minXor = xor - num
-                
+                minXor = min(minXor, xor - num)
                 xorCnt += 1
             else:
                 otherXor = max(otherXor, xor - num)
