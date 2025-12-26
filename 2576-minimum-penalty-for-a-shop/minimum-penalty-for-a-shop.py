@@ -1,18 +1,15 @@
 class Solution:
     def bestClosingTime(self, customers: str) -> int:
-        ans = penalty = n = len(customers)
-        Y = customers.count('Y')
-        N = 0
+        n = len(customers)
+        ans = -1
+        score = maxScore = 0
 
-        for i in range(n + 1):
-            if N + Y < penalty:
+        for i in range(n):
+            if customers[i] == 'Y': score += 1
+            else: score -= 1
+
+            if score > maxScore:
                 ans = i 
-                penalty = N + Y
-        
-            if i == n:
-                continue
+                maxScore = score
 
-            if customers[i] == 'Y': Y -= 1
-            else: N += 1
-
-        return ans
+        return ans + 1
