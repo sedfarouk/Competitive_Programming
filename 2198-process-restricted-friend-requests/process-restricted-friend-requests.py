@@ -18,14 +18,11 @@ class UnionFind:
     def union(self, u, v):
         rootX, rootY = self.find(u), self.find(v)
 
-        if self.enemies[rootX].intersection(self.members[rootY]):
-            return False
-
-        if self.enemies[rootY].intersection(self.members[rootX]):
-            return False
-
         if rootX == rootY:
             return True
+
+        if self.enemies[rootX].intersection(self.members[rootY]):
+            return False
 
         if self.size[rootX] < self.size[rootY]:
             rootX, rootY = rootY, rootX
