@@ -12,7 +12,7 @@ class Solution:
             if i == n:
                 continue
 
-            Y -= int(customers[i] == 'Y')
-            N += int(customers[i] == 'N')
+            if customers[i] == 'Y': Y -= 1
+            else: N += 1
 
         return ans
