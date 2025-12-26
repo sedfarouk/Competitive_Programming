@@ -1,14 +1,36 @@
 class Solution:
     def maximumValueSum(self, nums: List[int], k: int, edges: List[List[int]]) -> int:
         n = len(nums)
-        dp = [[0] * 2 for _ in range(n + 1)]
-        dp[n][0] = float("-inf")
+        summ = sum(nums)
+        xorCnt = 0
+        minXor = float("inf")
+        otherXor = float("-inf")
 
-        for i in range(n - 1, -1, -1):
-            for j in [0, 1]:
-                dp[i][j] = max(dp[i + 1][j] + nums[i], dp[i + 1][j ^ 1] + (nums[i] ^ k))
+        for num in nums:
+            xor = (num ^ k)
+            if xor >= num:
+                summ += (xor - num)
 
-        return dp[0][1]
+                if (xor - num) <= minXor:
+                    minXor = xor - num
+                
+                xorCnt += 1
+            else:
+                otherXor = max(otherXor, xor - num)
+
+        if xorCnt % 2:
+            summ = max(summ + otherXor, summ - minXor)
+
+        return summ
+        
+        # dp = [[0] * 2 for _ in range(n + 1)]
+        # dp[n][0] = float("-inf")
+
+        # for i in range(n - 1, -1, -1):
+        #     for j in [0, 1]:
+        #         dp[i][j] = max(dp[i + 1][j] + nums[i], dp[i + 1][j ^ 1] + (nums[i] ^ k))
+
+        # return dp[0][1]
 
 
         # @cache
