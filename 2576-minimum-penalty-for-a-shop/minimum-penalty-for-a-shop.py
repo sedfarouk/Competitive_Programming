@@ -1,7 +1,6 @@
 class Solution:
     def bestClosingTime(self, customers: str) -> int:
         ans = penalty = n = len(customers)
-        customers += '*'
         Y = customers.count('Y')
         N = 0
 
@@ -9,6 +8,9 @@ class Solution:
             if N + Y < penalty:
                 ans = i 
                 penalty = N + Y
+        
+            if i == n:
+                continue
 
             Y -= int(customers[i] == 'Y')
             N += int(customers[i] == 'N')
