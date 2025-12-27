@@ -3,7 +3,6 @@ class Solution:
         meetings.sort()
         scores = [0] * n
         used, available = [], []
-        ans = 0
 
         for st, end in meetings:
             while used and (st >= used[0][0] or len(used) == n):
@@ -17,8 +16,6 @@ class Solution:
                 room = len(used)
 
             scores[room] += 1
-            if scores[room] >= scores[ans]:
-                ans = room if scores[room] > scores[ans] else min(room, ans)
             heappush(used, (end, room))
 
-        return ans
+        return min(range(n), key=lambda x: (-scores[x], x))
