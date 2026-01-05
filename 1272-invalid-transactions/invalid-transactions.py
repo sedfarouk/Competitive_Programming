@@ -21,7 +21,7 @@ class Solution:
                 if t not in history or name not in history[t]:
                     continue
 
-                if len(history[t][name]) > 1 or next(iter(history[t][name])) != city:
+                if len(history[t][name]) > 1 or city not in history[t][name]:
                     invalid.append(trans)
                     break
 
