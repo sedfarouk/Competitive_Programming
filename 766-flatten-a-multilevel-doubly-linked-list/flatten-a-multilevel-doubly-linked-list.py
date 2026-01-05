@@ -14,20 +14,37 @@ class Solution:
             return head
 
         pseudoHead = Node(None, None, head, None)
-        self.flatten_dfs(pseudoHead, head)
+        prev = pseudoHead
+
+        stack = [head]
+
+        while stack:
+            curr = stack.pop()
+
+            curr.prev = prev
+            prev.next = curr
+
+            if curr.next:
+                stack.append(curr.next)
+            if curr.child:
+                stack.append(curr.child)
+                curr.child = None
+            
+            prev = curr
 
         pseudoHead.next.prev = None
         return pseudoHead.next
 
-    def flatten_dfs(self, prev, curr):
-        if not curr:
-            return prev
 
-        curr.prev = prev
-        prev.next = curr
+    # def flatten_dfs(self, prev, curr):
+    #     if not curr:
+    #         return prev
 
-        tempNext = curr.next
-        tail = self.flatten_dfs(curr, curr.child)
-        curr.child = None
-        return self.flatten_dfs(tail, tempNext)
+    #     curr.prev = prev
+    #     prev.next = curr
+
+    #     tempNext = curr.next
+    #     tail = self.flatten_dfs(curr, curr.child)
+    #     curr.child = None
+    #     return self.flatten_dfs(tail, tempNext)
 
