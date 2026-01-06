@@ -8,9 +8,8 @@ class Solution:
                 ptr = i
                 break
 
-        vis = vis = set([ptr])
         l, r = ptr - 1, ptr + 1
-        while l % n not in vis and balance[ptr] < 0:
+        while l % n != ptr and balance[ptr] < 0:
             ans += min(abs(balance[ptr]), balance[l % n]) * abs(ptr - l)
             balance[ptr] += balance[l % n]
             balance[l % n] = 0
@@ -22,7 +21,6 @@ class Solution:
             balance[ptr] += balance[r % n]
             balance[r % n] = 0
 
-            vis.add(l % n); vis.add(r % n)
             l, r = l - 1, r + 1
                 
         return ans if balance[ptr] >= 0 else -1
