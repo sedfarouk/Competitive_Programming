@@ -8,19 +8,21 @@ class Solution:
                 ptr = i
                 break
 
-        l, r = ptr - 1, ptr + 1
-        while l % n != ptr and balance[ptr] < 0:
-            ans += min(abs(balance[ptr]), balance[l % n]) * abs(ptr - l)
-            balance[ptr] += balance[l % n]
-            balance[l % n] = 0
+        d = 1
+        while ((ptr - d) % n) != ptr and balance[ptr] < 0:
+            l, r = (ptr - d) % n, (ptr + d) % n
+            
+            ans += min(abs(balance[ptr]), balance[l]) * abs(ptr - (ptr - d))
+            balance[ptr] += balance[l]
+            balance[l] = 0
 
             if balance[ptr] >= 0:
                 return ans
 
-            ans += min(abs(balance[ptr]), balance[r % n]) * abs(ptr - r)
-            balance[ptr] += balance[r % n]
-            balance[r % n] = 0
+            ans += min(abs(balance[ptr]), balance[r]) * abs(ptr - (ptr + d))
+            balance[ptr] += balance[r]
+            balance[r] = 0
 
-            l -= 1; r += 1
+            d += 1
                 
         return ans if balance[ptr] >= 0 else -1
