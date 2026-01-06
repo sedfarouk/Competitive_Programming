@@ -21,6 +21,6 @@ class Solution:
             balance[ptr] += balance[r % n]
             balance[r % n] = 0
 
-            l, r = l - 1, r + 1
+            l -= 1; r += 1
                 
         return ans if balance[ptr] >= 0 else -1
