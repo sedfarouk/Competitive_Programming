@@ -1,35 +1,35 @@
 class Solution:
     def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
+        n = len(equations)
         graph = defaultdict(list)
 
-        for i in range(len(equations)):
-            x, y = equations[i]
-            v1, v2 = values[i], 1 / values[i]
+        for i in range(n):
+            u, v = equations[i]
+            graph[u].append((v, values[i]))
+            graph[v].append((u, 1 / values[i]))
 
-            graph[x].append((v1, y))
-            graph[y].append((v2, x))
+        def eval_dfs(src, target):
+            stack = [(src, 1)]
+            vis = set([src])
 
-        def dfs(curr, target, val):
-            if curr == target:
-                return val
+            while stack:
+                u, val = stack.pop()
 
-            for v, nei in graph[curr]:
-                if nei in vis:
-                    continue
-        
-                vis.add(nei)
-                res = dfs(nei, target, val * v)
-                if res != -1.0:
-                    return res
+                if u == target:
+                    return val
+
+                for nei, f in graph[u]:
+                    if nei not in vis:
+                        stack.append((nei, val * f))
+                        vis.add(nei)
 
             return -1.0
 
-        ans = []
-        for st, end in queries:
-            if st not in graph or end not in graph:
-                ans.append(-1.0)
+        res = []
+        for u, v in queries:
+            if u not in graph or v not in graph:
+                res.append(-1.0)
             else:
-                vis = set([st])
-                ans.append(dfs(st, end, 1))
+                res.append(eval_dfs(u, v))
 
-        return ans
+        return res
