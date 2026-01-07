@@ -6,7 +6,7 @@ class Solution:
 
         def backtrack(i):
             if i == n:
-                res.append(subset[:])
+                res.append(copy.copy(subset))
                 return 
 
             backtrack(i + 1)
