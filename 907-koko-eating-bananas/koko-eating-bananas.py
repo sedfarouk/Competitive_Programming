@@ -1,7 +1,10 @@
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
         def f(x):
-            return sum([(p + x - 1) // x for p in piles]) <= h
+            time = 0
+            for p in piles:
+                time += (p + x - 1) // x
+            return time <= h
 
         l, r = 1, max(piles)
         ans = r
