@@ -1,15 +1,23 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         cnt = Counter(nums)
+        n = len(nums)
 
-        h = []
+        buckets = [[] for _ in range(n + 1)]
         for num, f in cnt.items():
-            if len(h) < k:
-                heappush(h, (f, num))
+            buckets[f].append(num)
 
-            elif f > h[0][0]:
-                heapreplace(h, (f, num))
+        flat_list = [item for bucket in buckets for item in bucket]
+        return flat_list[::-1][:k]
+        
+        # h = []
+        # for num, f in cnt.items():
+        #     if len(h) < k:
+        #         heappush(h, (f, num))
 
-        return [x[1] for x in h]
+        #     elif f > h[0][0]:
+        #         heapreplace(h, (f, num))
+
+        # return [x[1] for x in h]
 
 
