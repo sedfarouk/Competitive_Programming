@@ -6,9 +6,8 @@ class TrieNode:
 class Trie:
     def __init__(self):
         self.root = TrieNode()
-        self.cnt = 0
 
-    def add(self, word):
+    def addWord(self, word):
         curr = self.root
 
         for ch in word:
@@ -17,35 +16,34 @@ class Trie:
             curr = curr.children[ch]
         curr.end = True
 
-    def searchMagic(self, word):
-        def dfs(root, i):
-            if i == len(word):
-                return self.cnt == 1 and root.end
+    def search(self, word):
+        n = len(word)
+        
+        def dfs(i, c, node):
+            if i == n:
+                return c == 1 and node.end
 
-            for ch in root.children:
-                self.cnt += int(word[i] != ch)
-
-                if self.cnt < 2 and dfs(root.children[ch], i + 1):
-                    self.cnt = 0
+            for ch in node.children:
+                if ch == word[i] and dfs(i + 1, c, node.children[ch]):
                     return True
-
-                self.cnt -= int(word[i] != ch)
-
+                elif ch != word[i] and not c and dfs(i + 1, 1, node.children[ch]):
+                    return True 
             return False
-
-        return dfs(self.root, 0)
+        return dfs(0, 0, self.root)                             
+        
 
 class MagicDictionary:
 
     def __init__(self):
-        self.trie = Trie()
+        self.dic = Trie()
 
     def buildDict(self, dictionary: List[str]) -> None:
         for word in dictionary:
-            self.trie.add(word)
+            self.dic.addWord(word)
 
     def search(self, searchWord: str) -> bool:
-        return self.trie.searchMagic(searchWord)
+        return self.dic.search(searchWord)
+
 
 # Your MagicDictionary object will be instantiated and called as such:
 # obj = MagicDictionary()
