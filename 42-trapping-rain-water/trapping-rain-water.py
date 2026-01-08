@@ -1,16 +1,16 @@
 class Solution:
     def trap(self, height: List[int]) -> int:
-        pref = [0]
+        n = len(height)
+        ans = 0
+        prefixMax, suffixMax = [height[0]], [height[-1]]
 
-        for h in height:
-            pref.append(pref[-1])
+        for i in range(1, n):
+            prefixMax.append(max(prefixMax[-1], height[i]))
 
-            if h > pref[-1]:
-                pref[-1] = h
+        for i in range(n - 2, -1, -1):
+            suffixMax.append(max(suffixMax[-1], height[i]))
 
-        ans = max_h = 0
-        for i in range(len(height) - 1, -1, -1):
-            ans += max(0, min(max_h, pref[i]) - height[i])
-            max_h = max(max_h, height[i])
+        for i in range(n):
+            ans += max(0, min(prefixMax[i], suffixMax[n - i - 1]) - height[i])
 
         return ans
