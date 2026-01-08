@@ -1,20 +1,19 @@
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
-        n = len(s)
         wordDict = set(wordDict)
-        curr = []
+        res, words = [], []
+        n = len(s)
 
-        def backtrack(idx):
-            if idx == n:
-                ans.append(" ".join(curr))
-                return 
+        def backtrack(i):
+            if i == n:
+                res.append(" ".join(words)) 
+                return
 
-            for i in range(idx, n):
-                if s[idx : i + 1] in wordDict:
-                    curr.append(s[idx : i + 1])
-                    backtrack(i + 1)
-                    curr.pop()
+            for j in range(i, n):
+                if s[i : j + 1] in wordDict:
+                    words.append(s[i : j + 1])
+                    backtrack(j + 1)
+                    words.pop()
 
-        ans = []
         backtrack(0)
-        return ans
+        return res
