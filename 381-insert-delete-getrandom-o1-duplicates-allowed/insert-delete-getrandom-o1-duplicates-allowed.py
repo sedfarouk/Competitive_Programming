@@ -1,39 +1,30 @@
-class Node:
-    def __init__(self, val=-1):
-        self.val = val
-
-
 class RandomizedCollection:
-    def __init__(self):
-        self.keys = {}
-        self.values = defaultdict(list)
-        self.nodes = []
 
+    def __init__(self):
+        self.lst = []
+        self.idx = defaultdict(set)
 
     def insert(self, val: int) -> bool:
-        new_node = Node(val)
+        self.idx[val].add(len(self.lst))
+        self.lst.append(val)
 
-        self.keys[new_node] = len(self.nodes)
-        self.nodes.append(new_node)
-        self.values[val].append(new_node)
-
-        return len(self.values[val]) == 1
-
+        return len(self.idx[val]) == 1
 
     def remove(self, val: int) -> bool:
-        if not self.values[val]:
+        if not self.idx[val]:
             return False
 
-        node = self.values[val].pop()
-        self.nodes[self.keys[node]], self.nodes[-1] = self.nodes[-1], self.nodes[self.keys[node]]
-        self.keys[self.nodes[self.keys[node]]] = self.keys[node]
-        self.nodes.pop()
-        del self.keys[node]
+        removeIdx = self.idx[val].pop()
+        self.idx[self.lst[-1]].add(removeIdx)
+        self.idx[self.lst[-1]].discard(len(self.lst) - 1)
+        self.lst[removeIdx] = self.lst[-1]
+        self.lst.pop()
 
-        return True
+        return True 
 
     def getRandom(self) -> int:
-        return self.nodes[floor(random.random() * len(self.nodes))].val
+        return choice(self.lst)
+        
 
 
 # Your RandomizedCollection object will be instantiated and called as such:
