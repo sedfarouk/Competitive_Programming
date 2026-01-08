@@ -1,30 +1,30 @@
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
+        dirs = [(0, 1), (1, 0), (-1, 0), (0, -1)]
         n, m = len(grid), len(grid[0])
-        dirs = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+        ans = 0
 
-        def inbound(r, c):
+        def inbounds(r, c):
             return 0 <= r < n and 0 <= c < m
-        
-        def dfs(x, y):
-            stk = [(x, y)]
 
-            while stk:
-                r, c = stk.pop()
+        def coverIsland(i, j):
+            queue = deque([(i, j)])
+            grid[i][j] = '0'
+
+            while queue:
+                r, c = queue.popleft()
 
                 for dr, dc in dirs:
-                    nr, nc = dr + r, dc + c
+                    nr, nc = r + dr, c + dc
 
-                    if inbound(nr, nc) and grid[nr][nc] == '1':
+                    if inbounds(nr, nc) and grid[nr][nc] == '1':
+                        queue.append((nr, nc))
                         grid[nr][nc] = '0'
-                        stk.append((nr, nc))
 
-        ans = 0
         for i in range(n):
             for j in range(m):
                 if grid[i][j] == '1':
+                    coverIsland(i, j)
                     ans += 1
-                    grid[i][j] = '0'
-                    dfs(i, j)
 
         return ans
