@@ -1,14 +1,16 @@
 class Solution:
     def maxDepth(self, s: str) -> int:
-        ans = 0
-        stack = []
+        ans = cnt = 0
 
-        for i in range(len(s)):
-            if s[i] == '(':
-                stack.append(s[i])
-            elif s[i] == ')':
-                stack.pop()
-            ans = max(ans, len(stack))
-
-        return ans
+        for c in s:
+            if c != '(' and c != ')':
+                continue
             
+            if c == '(':
+                cnt += 1
+            else:
+                cnt -= 1
+
+            ans = max(ans, cnt)
+        
+        return ans
