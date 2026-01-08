@@ -1,18 +1,20 @@
 class OrderedStream:
 
     def __init__(self, n: int):
-        self.mp = {}
-        self.curr = 1
+        self.currId = 1
+        self.stream = defaultdict(str)
+        
 
     def insert(self, idKey: int, value: str) -> List[str]:
-        self.mp[idKey] = value
+        self.stream[idKey] = value
+        res = []
 
-        ans = []
-        while self.curr in self.mp:
-            ans.append(self.mp[self.curr])
-            self.curr += 1
+        while self.currId in self.stream:
+            res.append(self.stream[self.currId])
+            del self.stream[self.currId]
+            self.currId += 1
 
-        return ans
+        return res
 
 
 # Your OrderedStream object will be instantiated and called as such:
