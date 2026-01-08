@@ -3,8 +3,8 @@ class Solution:
         mn = float("inf")
         ans = 0
 
-        for num in prices:
-            ans = max(ans, num - mn)
-            mn = min(mn, num)
+        for p in prices:
+            mn = min(mn, p)
+            ans = max(ans, p - mn)
 
         return ans
