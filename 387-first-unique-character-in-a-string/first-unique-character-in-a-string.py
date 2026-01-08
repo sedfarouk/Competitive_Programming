@@ -1,9 +1,21 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        cnt = Counter(s)
+        st = set()
+        seen = set()
+        n = len(s)
 
-        for i in range(len(s)):
-            if cnt[s[i]] == 1:
+        for i in range(n):
+            present = s[i] in seen 
+
+            if present and s[i] in st:
+                st.remove(s[i])
+            elif not present:
+                st.add(s[i])
+                seen.add(s[i])
+
+        for i in range(n):
+            if s[i] in st:
                 return i
-
         return -1
+
+            
