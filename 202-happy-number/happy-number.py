@@ -1,18 +1,16 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
-        seen = set()
-
-        while n not in seen:
-            if n == 1:
-                return True
-                
-            seen.add(n)
-            x = n
-            n = 0
-
+        # tortoise-hare (Floyd) algorithm
+        def findHappyNum(x):
+            res = 0
             while x:
-                r = x % 10
-                n += r * r
+                res += (x % 10) ** 2
                 x //= 10
-        
-        return False
+            return res
+
+        slow, fast = n, findHappyNum(n)
+        while fast != 1 and slow != fast:
+            slow = findHappyNum(slow)
+            fast = findHappyNum(findHappyNum(fast))
+
+        return fast == 1
