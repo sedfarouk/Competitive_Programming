@@ -1,28 +1,16 @@
 class Solution:
-    def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
-        n, m = len(obstacleGrid), len(obstacleGrid[0])
-        dirs = [(1, 0), (0, 1)]
-
-        def inbound(r, c):
-            return 0 <= r < n and 0 <= c < m
+    def uniquePathsWithObstacles(self, grid: List[List[int]]) -> int:
+        n, m = len(grid), len(grid[0])
+        res = []
 
         @cache
-        def dp(r, c):
-            if obstacleGrid[r][c]:
+        def dfs(i, j):
+            if i == n or j == m or grid[i][j] == 1:
                 return 0
-                
-            if r == n - 1 and c == m - 1:
-                return 1
 
-            ans = 0
-            for dr, dc in dirs:
-                nr, nc = r + dr, c + dc
+            if i == n - 1 and j == m - 1:
+                return int(grid[i][j] == 0)
 
-                if inbound(nr, nc):
-                    ans += dp(nr, nc)
+            return dfs(i + 1, j) + dfs(i, j + 1)
 
-            return ans
-
-        res = dp(0, 0)
-        dp.cache_clear()
-        return res
+        return dfs(0, 0)
