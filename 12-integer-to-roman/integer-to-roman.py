@@ -1,28 +1,28 @@
 class Solution:
     def intToRoman(self, num: int) -> str:
-        roman = {1:'I', 5:'V', 10:'X', 50:'L', 100:'C', 500:'D', 1000:'M'}
-        ans = []
+        digits = [
+            (1000, "M"),
+            (900, "CM"),
+            (500, "D"),
+            (400, "CD"),
+            (100, "C"),
+            (90, "XC"),
+            (50, "L"),
+            (40, "XL"),
+            (10, "X"),
+            (9, "IX"),
+            (5, "V"),
+            (4, "IV"),
+            (1, "I")
+        ]
 
-        i = 0
-        while num:
-            last_digit = num % 10
+        roman_digits = []
 
-            if i == 3:
-                ans.append(last_digit * 'M')
+        for value, symbol in digits:
+            if num == 0:
                 break
-            
-            if last_digit == 4 or last_digit == 9:
-                if last_digit == 4:
-                    val = roman[10**i] + roman[5*10**i]
-                else:
-                    val = roman[10**i] + roman[10**(i+1)]
-            else:
-                val = (roman[5*(10**i)] if last_digit >= 5 else '') + roman[10**i] * (last_digit % 5)
 
-            ans.append(val)
-            num //= 10
-            i += 1
+            count, num = divmod(num, value)
+            roman_digits.append(symbol * count)
 
-        return "".join(reversed(ans))
-
-
+        return "".join(roman_digits)
