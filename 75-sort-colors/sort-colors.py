@@ -3,19 +3,21 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        n = len(nums)
-        def arrange(st, num):
-            while st < n and nums[st] == num:
-                st += 1
+        p0 = curr = 0
+        p2 = len(nums) - 1
 
-            slow, fast = st, st + 1
-            while fast < n:
-                if nums[fast] == num:
-                    nums[slow], nums[fast] = nums[fast], nums[slow]
-                    slow += 1
-                fast += 1
+        while curr <= p2:
+            if nums[curr] == 0:
+                nums[p0], nums[curr] = nums[curr], nums[p0]
+                p0 += 1
+                curr += 1
+            elif nums[curr] == 2:
+                nums[curr], nums[p2] = nums[p2], nums[curr]
+                p2 -= 1
+            else:
+                curr += 1
 
-            return slow
+            
 
-        st2 = arrange(0, 0)
-        st3 = arrange(st2, 1) 
+
+        
