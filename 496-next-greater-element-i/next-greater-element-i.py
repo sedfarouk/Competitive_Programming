@@ -1,12 +1,11 @@
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        stack = []
-        nextGreater = defaultdict(lambda: -1)
+        nextGreater = [-1] * (max(nums2) + 1)
+        monoStack = []
 
-        for i in range(len(nums2)):
-            while stack and stack[-1] < nums2[i]:
-                nextGreater[stack.pop()] = nums2[i]
+        for num in nums2:
+            while monoStack and monoStack[-1] < num:
+                nextGreater[monoStack.pop()] = num
+            monoStack.append(num)
 
-            stack.append(nums2[i])
-
-        return [nextGreater[x] for x in nums1]
+        return [nextGreater[num] for num in nums1]
