@@ -2,18 +2,18 @@ class Solution:
     def numDecodings(self, s: str) -> int:
         n = len(s)
 
-        @cache
+        @lru_cache
         def dp(i):
             if i == n:
                 return 1
 
-            if s[i] == '0':
-                return 0
+            ans = 0
+            if s[i] != '0':
+                ans = dp(i + 1)
+                if i < n - 1 and int(s[i:i+2]) < 27:
+                    ans += dp(i + 2)
 
-            x = dp(i + 1) 
-            y = dp(i + 2) if 9 < int(s[i:i+2]) < 27 else 0
-            return x + y
+            return ans
 
-        ans = dp(0)
-        dp.cache_clear()
-        return ans
+        return dp(0)
+                
