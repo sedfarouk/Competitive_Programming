@@ -1,19 +1,15 @@
 class Solution:
     def myPow(self, x: float, n: int) -> float:
-        if n == 0: return 1
+        def power(base, exp):
+            if exp == 0:
+                return 1
 
-        @cache
-        def pow(base, exp):
-            if exp == 1:
-                return base
-
-            y = pow(base, exp // 2)
+            half = power(base, exp // 2)
             if exp % 2:
-                return base * y * y
-            return y * y
+                return base * half * half
+            return half * half
 
-        res = pow(x, abs(n))
-        pow.cache_clear()
         if n < 0:
-            return 1/res
-        return res
+            return 1 / power(x, -n)
+        return power(x, n)
+
