@@ -3,37 +3,36 @@ class Solution:
         n = len(routes)
 
         if source == target: return 0
-        
+
         routes = [set(route) for route in routes]
         graph = defaultdict(list)
 
         for i in range(n):
             for j in range(i + 1, n):
-                if len(routes[i].intersection(routes[j])) != 0:
+                if len(routes[i] & routes[j]) > 0:
                     graph[i].append(j)
                     graph[j].append(i)
 
-        ans = 0
-        st_nodes = [i for i in range(n) if source in routes[i]]
-        queue = deque(st_nodes)
-        vis = set(st_nodes)
+        queue = deque([i for i in range(n) if source in routes[i]])
+        vis = [False] * n
 
+        for node in queue: vis[node] = True
+
+        ans = 0
+        
         while queue:
             l = len(queue)
-
-            for _ in range(l):
-                bus = queue.popleft()
-
-                if target in routes[bus]:
-                    return ans + 1
-
-                for nei in graph[bus]:
-                    if nei in vis:
-                        continue
-                    vis.add(nei)
-                    queue.append(nei)
             ans += 1
 
+            for _ in range(l):
+                route = queue.popleft()
+
+                if target in routes[route]:
+                    return ans
+
+                for nei in graph[route]:
+                    if not vis[nei]:
+                        queue.append(nei)
+                        vis[nei] = True
+            
         return -1
-                
-        
