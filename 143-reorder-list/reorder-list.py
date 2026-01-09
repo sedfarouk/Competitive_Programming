@@ -9,28 +9,30 @@ class Solution:
         Do not return anything, modify head in-place instead.
         """
         slow, fast = head, head.next
+
         while fast and fast.next:
-            slow = slow.next
             fast = fast.next.next
+            slow = slow.next
 
-        last_node = slow
-        slow = slow.next
-        head2 = last_node.next = None
-        while slow:
-            nxt = slow.next
-            slow.next = head2
-            head2 = slow
-            slow = nxt
+        head2 = slow.next
+        slow.next = prev = None
 
+        while head2:
+            next = head2.next
+            head2.next = prev
+            prev = head2
+            head2 = next
+            
+        head2 = prev
         head1 = head
         while head1 and head2:
-            nxt1 = head1.next
+            next1 = head1.next
+            next2 = head2.next
             head1.next = head2
-            head1 = nxt1
-            nxt2 = head2.next
-            head2.next = head1
-            head2 = nxt2
+            head2.next = next1
+            head1 = next1
+            head2 = next2
 
         return head
 
-        
+
