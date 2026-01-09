@@ -1,31 +1,30 @@
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
-        neighbours = defaultdict(list)
+        graph = defaultdict(list)
+        ans = 0
 
-        for word in wordList:
-            l = len(word)
-            for i in range(l):
-                pat = word[:i] + '*' + word[i+1:]
-                neighbours[pat].append(word)
+        for w in wordList:
+            n = len(w)
+            for i in range(n):
+                graph[w[:i] + '*' + w[i+1:]].append(w)
 
-        queue = deque([(beginWord, 1)])
-        vis = set()
+        queue = deque([beginWord])
+        vis = set([beginWord])
         while queue:
-            word, cnt = queue.popleft()
+            l = len(queue)
+            ans += 1
 
-            if endWord == word:
-                return cnt
+            for _ in range(l):
+                w = queue.popleft()
+                n = len(w)
 
-            l = len(word)
-            for i in range(l):
-                pat = word[:i] + '*' + word[i+1:]
+                if w == endWord:
+                    return ans
 
-                if pat in vis: 
-                    continue
-
-                for nei in neighbours[pat]:
-                    if nei not in vis:
-                        queue.append((nei, cnt + 1))
-                vis.add(pat)
-
+                for i in range(n):
+                    for nei in graph[w[:i] + '*' + w[i+1:]]:
+                        if nei not in vis:
+                            queue.append(nei)
+                            vis.add(nei)         
+        
         return 0
