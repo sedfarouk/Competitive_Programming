@@ -1,22 +1,25 @@
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
-        n = len(nums)
         nums.sort()
-        candidates = Counter(nums)
+        n = len(nums)
+        cnt = Counter(nums)
+        curr = []
+        u = list(cnt.keys())
 
         def backtrack():
             if len(curr) == n:
-                solutions.append(curr.copy())
-                return 
+                solutions.append(copy.copy(curr))
+                return
 
-            for num in candidates:
-                if candidates[num] > 0:
-                    candidates[num] -= 1
-                    curr.append(num)
+            for k in u:
+                if cnt[k] > 0:
+                    cnt[k] -= 1
+                    curr.append(k)
                     backtrack()
+                    cnt[k] += 1
                     curr.pop()
-                    candidates[num] += 1
 
-        solutions, curr = [], []
+        solutions = []
         backtrack()
         return solutions
+
