@@ -1,31 +1,32 @@
-class DoublyLinkedListNode:
-    def __init__(self, val="", next=None, prev=None):
-        self.val = val
-        self.next = next
-        self.prev = prev
-
-
 class BrowserHistory:
+
     def __init__(self, homepage: str):
-        self.head = DoublyLinkedListNode(homepage)
+        self.history = []
+        self.future = []
+        self.current = homepage
+        
 
     def visit(self, url: str) -> None:
-        tabNode = DoublyLinkedListNode(url)
-        self.head.next = tabNode
-        tabNode.prev = self.head
-        self.head = tabNode
+        self.history.append(self.current)
+        self.current = url
+        self.future = []
+    
 
     def back(self, steps: int) -> str:
-        while steps > 0 and self.head.prev:
-            self.head = self.head.prev
+        while steps > 0 and self.history:
+            self.future.append(self.current)
+            self.current = self.history.pop()
             steps -= 1
-        return self.head.val
+        return self.current
+        
 
     def forward(self, steps: int) -> str:
-        while steps > 0 and self.head.next:
-            self.head = self.head.next
+        while steps > 0 and self.future:
+            self.history.append(self.current)
+            self.current = self.future.pop()
             steps -= 1
-        return self.head.val
+        return self.current
+
 
 # Your BrowserHistory object will be instantiated and called as such:
 # obj = BrowserHistory(homepage)
