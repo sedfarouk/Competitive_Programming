@@ -1,25 +1,24 @@
 class Solution:
-    def findOrder(self, n: int, prerequisites: List[List[int]]) -> List[int]:
+    def findOrder(self, n: int, pr: List[List[int]]) -> List[int]:
         graph = defaultdict(list)
-        prereqs = [0] * n
+        inorder = [0] * n
 
-        for course, pre in prerequisites:
-            graph[pre].append(course)
-            prereqs[course] += 1
+        for u, v in pr:
+            graph[v].append(u)
+            inorder[u] += 1
 
-        queue = deque([i for i in range(n) if not prereqs[i]])
-
+        queue = deque([i for i in range(n) if inorder[i] == 0])
         ordering = []
+
         while queue:
-            pre = queue.popleft()
+            c = queue.popleft()
 
-            for nei in graph[pre]:
-                prereqs[nei] -= 1
+            for nei in graph[c]:
+                inorder[nei] -= 1
 
-                if not prereqs[nei]:
+                if inorder[nei] == 0:
                     queue.append(nei)
 
-            if not prereqs[pre]:
-                ordering.append(pre)
-            
+            ordering.append(c)
+
         return ordering if len(ordering) == n else []
