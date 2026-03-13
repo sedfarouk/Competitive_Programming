@@ -4,7 +4,7 @@ class Solution:
             h = mH
 
             for w in wT:
-                k = int((math.sqrt(1 + 8*T//w) - 1) // 2)
+                k = int((math.sqrt(1 + 8*T//w) - 1) // 2) # Simplified through quadratic formula
                 h -= k
 
                 if h <= 0:
