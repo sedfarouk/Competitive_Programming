@@ -13,10 +13,8 @@ class Solution:
             return rev
 
         for idx, num in enumerate(nums):
-            if num % 10 != 0:
-                x = reverseNum(num)
-                ans = min(ans, idx - h[x])
-            h[reverseNum(reverseNum(num))] = idx
+            ans = min(ans, idx - h[num])
+            h[reverseNum(num)] = idx
 
         return ans if ans != float("inf") else -1
             
