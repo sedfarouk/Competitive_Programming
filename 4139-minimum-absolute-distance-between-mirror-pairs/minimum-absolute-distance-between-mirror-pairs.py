@@ -1,7 +1,7 @@
 class Solution:
     def minMirrorPairDistance(self, nums: List[int]) -> int:
-        h = defaultdict(lambda: float("-inf"))
-        ans = float("inf")
+        h = {}
+        ans = 1000000
 
         def reverseNum(num):
             rev = 0
@@ -13,9 +13,10 @@ class Solution:
             return rev
 
         for idx, num in enumerate(nums):
-            ans = min(ans, idx - h[num])
+            if num in h:
+                ans = min(ans, idx - h[num])
             h[reverseNum(num)] = idx
 
-        return ans if ans != float("inf") else -1
+        return ans if ans != 1000000 else -1
             
             
