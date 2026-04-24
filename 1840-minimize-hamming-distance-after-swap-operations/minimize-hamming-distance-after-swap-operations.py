@@ -1,41 +1,31 @@
 class Solution:
     def minimumHammingDistance(self, source: List[int], target: List[int], allowedSwaps: List[List[int]]) -> int:
-        n = len(source)
-        par = {i:i for i in range(n)}
-        sz = [1] * n
-        vals = {i: Counter([source[i]]) for i in range(n)}
-
-        def find(u):
-            if par[u] == u:
-                return u
-            par[u] = find(par[u])
-            return par[u]
-
-        def union(u, v):
-            ru, rv = find(u), find(v)
-
-            if ru != rv:
-                if sz[ru] > sz[rv]:
-                    par[rv] = ru
-                    sz[ru] += sz[rv]
-                    vals[ru].update(vals[rv])
-                else:
-                    par[ru] = rv
-                    sz[rv] += sz[ru]
-                    vals[rv].update(vals[ru])
+        g = defaultdict(list)
 
         for u, v in allowedSwaps:
-            union(u, v)
-        
+            g[u].append(v); g[v].append(u)
+
+        vis = set()
+        def bfs(u):
+            q = deque([u])
+            cntT, cntS = Counter(), Counter()
+            vis.add(u)
+
+            while q:
+                x = q.popleft()
+                cntT[target[x]] += 1; cntS[source[x]] += 1
+
+                for nei in g[x]:
+                    if nei not in vis:
+                        vis.add(nei)
+                        q.append(nei)
+
+            cntRes = cntT - cntS
+            res = sum([abs(x) for x in cntRes.values()])
+            return res
+
         ans = 0
-        for i in range(n):
-            p = find(i)
-            if target[i] not in vals[p]:
-                ans += 1
-            else:
-                vals[p][target[i]] -= 1
-
-                if vals[p][target[i]] == 0:
-                    del vals[p][target[i]]
-
+        for u in range(len(source)):
+            if u not in vis: ans += bfs(u)
+        
         return ans
