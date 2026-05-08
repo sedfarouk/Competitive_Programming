@@ -1,50 +1,53 @@
-MAXX = 10**6 + 1
-isPrime = [True] * MAXX
+MAXX = 1000000
+primes = [True] * (MAXX + 2)
+primes[0] = primes[1] = False
+MULT = defaultdict(list)
+
+for i in range(2, MAXX + 1):
+    if primes[i]:
+        MULT[i].append(i)
+        for j in range(i * 2, MAXX + 1, i):
+            primes[j] = False
+            MULT[i].append(j)
 
 class Solution:
-    def fill(self):
-        isPrime[0] = isPrime[1] = False
-        for i in range(2, MAXX):
-            if isPrime[i]:
-                for j in range(i + i, MAXX, i):
-                    isPrime[j] = False
-
     def minJumps(self, nums: List[int]) -> int:
-        if isPrime[0]: self.fill()
-        
         n = len(nums)
-        hmap = defaultdict(list)   
+        indexes = defaultdict(list)
         mx = max(nums)
 
-        for i in range(n): hmap[nums[i]].append(i)         
+        for idx, num in enumerate(nums):
+            indexes[num].append(idx)
 
+        queue = deque([0])
         vis = set([0])
-        queue = deque([(0, 0)])
+        used_primes = set()
+
+        ans = 0
+
         while queue:
-            idx, steps = queue.popleft()
+            for _ in range(len(queue)):
+                curr = queue.popleft()
 
-            if idx == n - 1:
-                return steps
+                if curr == n - 1:
+                    return ans
 
-            if idx + 1 < n and (idx + 1) not in vis:
-                queue.append((idx + 1, steps + 1))
-                vis.add(idx + 1)
+                if curr < n - 1 and (curr + 1) not in vis:
+                    vis.add(curr + 1)
+                    queue.append(curr + 1)
 
-            if idx - 1 > 0 and (idx - 1) not in vis:
-                queue.append((idx - 1, steps + 1))
-                vis.add(idx - 1)
+                if curr > 0 and (curr - 1) not in vis:
+                    vis.add(curr - 1)
+                    queue.append(curr - 1)
 
-            if not isPrime[nums[idx]]: continue
+                if primes[nums[curr]] and nums[curr] not in used_primes:
+                    used_primes.add(nums[curr])
 
-            for i in range(nums[idx], mx + 1, nums[idx]):
-                for j in hmap[i]:
-                    if j not in vis: 
-                        queue.append((j, steps + 1))
-                        vis.add(j)
-                del hmap[i]
+                    for num in MULT[nums[curr]]:
+                        if num > mx: break
+                        for idx in indexes[num]:
+                            if idx not in vis:
+                                vis.add(idx)
+                                queue.append(idx)
 
-
-
-            
-
-            
+            ans += 1
