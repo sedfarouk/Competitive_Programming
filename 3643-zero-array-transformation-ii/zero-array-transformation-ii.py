@@ -1,31 +1,33 @@
 class Solution:
     def minZeroArray(self, nums: List[int], queries: List[List[int]]) -> int:
-        n, m = len(nums), len(queries)
+        n, q_len = len(nums), len(queries)
 
-        def f(x):
-            diff = [0] * (n + 2)
+        def can(x):
+            diff = [0] * (n + 1)
 
             for i in range(x):
                 l, r, d = queries[i]
-                
-                diff[l + 1] -= d; diff[r + 2] += d
+                diff[l] -= d
+                if r + 1 < n:
+                    diff[r + 1] += d
 
-            for i in range(1, n + 1):
-                diff[i] += diff[i - 1]
+            curr = 0
+            for i in range(n):
+                curr += diff[i]
+                if nums[i] + curr > 0:
+                    return False
 
-                if (nums[i - 1] + diff[i]) > 0: return False
-            
             return True
 
-        l, r = 0, m
+        l, r = 0, q_len
         ans = -1
-        while l <= r:
-            m = l + (r - l) // 2
 
-            if f(m):
-                r = m - 1
-                ans = m
+        while l <= r:
+            mid = (l + r) // 2
+            if can(mid):
+                ans = mid
+                r = mid - 1
             else:
-                l = m + 1
-        
+                l = mid + 1
+
         return ans
