@@ -7,7 +7,7 @@ class Solution:
             r -= 1
 
         first, last = nums[l], nums[r]
-        ans = float("inf")
+        ans = 5001
         while l <= r:
             m = l + (r - l) // 2
             ans = min(ans, nums[m])
