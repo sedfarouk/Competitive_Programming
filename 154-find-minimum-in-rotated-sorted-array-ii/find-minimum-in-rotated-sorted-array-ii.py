@@ -1,18 +1,13 @@
 class Solution:
     def findMin(self, nums: List[int]) -> int:
-        '''
-        f < c < l ---> 4 < 5 < 6
-        f > c < l ---> 6 > 4 < 5
-        f < c > l ---> 5 < 6 > 4
-        '''
-        while len(nums) > 1 and nums[0] == nums[-1]:
-            nums.pop()
-
         n = len(nums)
         l, r = 0, n - 1
+
+        while r and nums[0] == nums[r]:
+            r -= 1
+
         first, last = nums[l], nums[r]
         ans = float("inf")
-
         while l <= r:
             m = l + (r - l) // 2
             ans = min(ans, nums[m])
