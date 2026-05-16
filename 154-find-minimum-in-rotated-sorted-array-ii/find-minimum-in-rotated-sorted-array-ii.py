@@ -7,14 +7,12 @@ class Solution:
             r -= 1
 
         first, last = nums[l], nums[r]
-        ans = 5001
-        while l <= r:
+        while l < r:
             m = l + (r - l) // 2
-            ans = min(ans, nums[m])
 
             if first <= nums[m] > last:
-                l = m + 1 
+                l = m + 1
             else:
-                r = m - 1
+                r = m
 
-        return ans
+        return nums[l]
