@@ -1,25 +1,21 @@
 class Solution:
     def maxJumps(self, arr: List[int], d: int) -> int:
-        @lru_cache(None)
-        def dp(idx):
+        n = len(arr)
+
+        @cache
+        def dp(i):
             ans = 0
-            for i in range(idx - 1, max(-1, idx - d - 1), -1):
-                if arr[idx] > arr[i]:
-                    ans = max(ans, dp(i) + 1)
-                else:
-                    break
+            for j in range(i - 1, max(-1, i - d - 1), -1):
+                if arr[j] >= arr[i]: break
+                ans = max(ans, dp(j) + 1)
 
-            for i in range(idx + 1, min(len(arr), idx + d + 1)):
-                if arr[idx] > arr[i]:
-                    ans = max(ans, dp(i) + 1)
-                else:
-                    break
-
+            for j in range(i + 1, min(n, i + d + 1)):
+                if arr[j] >= arr[i]: break
+                ans = max(ans, dp(j) + 1)
+                
             return ans
 
         res = 0
-        for i in range(len(arr)):
+        for i in range(n):
             res = max(res, dp(i) + 1)
-
         return res
-        
