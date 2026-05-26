@@ -1,23 +1,19 @@
 class Solution:
-    def canReach(self, s: str, minJ: int, maxJ: int) -> bool:
+    def canReach(self, s: str, minJump: int, maxJump: int) -> bool:
+        if s[-1] != '0': return False
         n = len(s)
-
-        if int(s[-1]): return False
 
         dp = [False] * n
         dp[0] = True
-        reach, maxR = 0, maxJ
+        count = 0
 
-        for i in range(minJ, n):
-            if i > maxR: return False
+        for i in range(minJump, n):
+            count += dp[i - minJump]
 
-            reach += dp[i - minJ]
-
-            if i > maxJ:
-                reach -= dp[i - maxJ - 1]
-
-            if reach and not int(s[i]):
+            if i > maxJump:
+                count -= dp[i - maxJump - 1]
+            
+            if count > 0 and s[i] == '0':
                 dp[i] = True
-                maxR = i + maxJ
-
-        return reach > 0
+        
+        return count > 0
