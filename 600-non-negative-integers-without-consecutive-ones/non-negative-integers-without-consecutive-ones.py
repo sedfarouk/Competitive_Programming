@@ -15,5 +15,7 @@ class Solution:
 
             return ans
 
-        return dp(0, True, True)
+        res = dp(0, True, True)
+        dp.cache_clear()
+        return res
 
