@@ -1,7 +1,6 @@
 class Solution:
     def findIntegers(self, n: int) -> int:
         bs = bin(n)[2:]
-        print(bs)
         n = len(bs)
 
         @cache
