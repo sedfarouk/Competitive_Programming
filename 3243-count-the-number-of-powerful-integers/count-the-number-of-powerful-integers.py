@@ -7,8 +7,6 @@ class Solution:
 
             if n < m: return 0
 
-            ns = '*' * (n - m) + s
-
             @cache
             def dp(i, tight):
                 if i == n: return 1
@@ -17,7 +15,7 @@ class Solution:
                 ans = 0
 
                 for d in range(lim + 1):
-                    if ns[i] != '*' and int(ns[i]) != d: continue
+                    if n - i <= m and int(s[m - (n - i)]) != d: continue
                     ans += dp(i + 1, tight and d == int(x[i]))
                 
                 return ans
