@@ -11,9 +11,6 @@ class Solution:
         def count(x):
             n = len(x)
 
-            if n == 1:
-                return int(x)
-
             @cache
             def dp(i, tight, prev, start):
                 if i == n: return int(start)
@@ -22,8 +19,10 @@ class Solution:
                 ans = 0
 
                 for d in range(lim + 1):
-                    if d == 0 and not start: ans = (ans + dp(i + 1, False, 0, False)) % MOD
-                    if abs(prev - d) == 1 or (not start and d > 0): ans = (ans + dp(i + 1, tight and d == lim, d, start or d > 0)) % MOD
+                    if d == 0 and not start: 
+                        ans = (ans + dp(i + 1, False, 0, False)) % MOD
+                    elif abs(prev - d) == 1 or (not start and d > 0): 
+                        ans = (ans + dp(i + 1, tight and d == lim, d, start or d > 0)) % MOD
 
                 return ans
 
