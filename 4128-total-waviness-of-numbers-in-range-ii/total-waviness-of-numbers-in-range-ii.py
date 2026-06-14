@@ -32,7 +32,9 @@ class Solution:
                 
                 return ans
 
-            return dp(0, True, False, -1, -1, 0)
+            res = dp(0, True, False, -1, -1, 0)
+            dp.cache_clear()
+            return res
 
         num1, num2 = list(map(int, str(num1))), list(map(int, str(num2)))
         return count(num2) - count(num1) + waviness(num1)
