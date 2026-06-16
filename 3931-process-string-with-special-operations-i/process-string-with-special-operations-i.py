@@ -6,7 +6,7 @@ class Solution:
         for c in s:
             if c == '*': 
                 if ans: ans.pop() if d else ans.popleft()
-            elif c == '#': ans = deque(list(ans) + list(ans))
+            elif c == '#': ans.extend(ans)
             elif c == '%': d = not d
             else: ans.append(c) if d else ans.appendleft(c)
         
