@@ -1,13 +1,11 @@
 class Solution:
     def processStr(self, s: str) -> str:
-        ans = deque()
-        d = True
+        ans = []
 
         for c in s:
-            if c == '*': 
-                if ans: ans.pop() if d else ans.popleft()
+            if c == '*': ans.pop() if ans else None
             elif c == '#': ans.extend(ans)
-            elif c == '%': d = not d
-            else: ans.append(c) if d else ans.appendleft(c)
+            elif c == '%': ans.reverse()
+            else: ans.append(c)
         
-        return "".join(list(ans) if d else list(ans)[::-1])
+        return "".join(ans)
