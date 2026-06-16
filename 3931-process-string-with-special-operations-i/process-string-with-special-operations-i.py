@@ -1,0 +1,11 @@
+class Solution:
+    def processStr(self, s: str) -> str:
+        ans = []
+
+        for c in s:
+            if c == '*': ans.pop() if ans else None
+            elif c == '#': ans = ans[:] + ans[:]
+            elif c == '%': ans = ans[::-1]
+            else: ans.append(c)
+        
+        return "".join(ans)
