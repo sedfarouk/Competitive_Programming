@@ -1,7 +1,6 @@
 class Solution:
     def maxRatings(self, units: List[List[int]]) -> int:
         us = sorted([sorted(x, reverse=True) for x in units], key=lambda x:(x[-2] if len(x) > 1 else x[-1]), reverse=True)
-        print(us)
         ans = 0
 
         for u in us:
