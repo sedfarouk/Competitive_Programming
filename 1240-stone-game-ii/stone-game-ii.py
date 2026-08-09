@@ -1,21 +1,22 @@
 class Solution:
     def stoneGameII(self, piles: List[int]) -> int:
         n = len(piles)
+        suff = [0] * (n + 1)
 
+        for i in range(n - 1, -1, -1):
+            suff[i] = suff[i + 1] + piles[i]
+ 
         @cache
-        def dp(i, t, m):
+        def dp(i, m):
             if i >= n: return 0
 
-            ans = float("-inf") if t else float("inf")
-            summ = 0
-            for j in range(i, min(n, i + 2 * m)):
-                summ += piles[j]
-                
-                if t: ans = max(ans, dp(j + 1, not t, max(j - i + 1, m)) + summ)
-                else: ans = min(ans, dp(j + 1, not t, max(j - i + 1, m)))
+            ans = float("-inf")
+            for j in range(1, 2 * m + 1):    
+                if i + j > n: break            
+                ans = max(ans, suff[i] - dp(i + j, max(j, m)))
 
             return ans
         
-        res = dp(0, True, 1)
+        res = dp(0, 1)
         dp.cache_clear()
         return res
