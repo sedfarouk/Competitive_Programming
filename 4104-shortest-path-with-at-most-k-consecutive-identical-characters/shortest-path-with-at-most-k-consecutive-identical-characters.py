@@ -1,42 +1,25 @@
 class Solution:
-    def shortestPath(self, n, edges, labels, k):
-        graph = [[] for _ in range(n)]
+    def shortestPath(self, n: int, edges: List[List[int]], labels: str, k: int) -> int:
+        graph = defaultdict(list)
 
         for u, v, w in edges:
-            graph[u].append((v, w))
+            graph[u].append((w, v))
 
-        dist = [[float('inf')] * (k + 1) for _ in range(n)]
+        queue = [(0, 0, 1)]
+        dist = [[float("inf")] * (k + 1) for _ in range(n)]
         dist[0][1] = 0
 
-        pq = [(0, 0, 1)]
+        while queue:
+            w, q, d = heappop(queue)
 
-        while pq:
-            d, u, cnt = heappop(pq)
+            if q == n - 1: return w
 
-            if d != dist[u][cnt]:
-                continue
+            for weight, nei in graph[q]:
+                nw = w + weight
+                nd = 1 if labels[q] != labels[nei] else (d + 1)
 
-            if u == n - 1:
-                return d
-
-            for v, w in graph[u]:
-                nc = cnt + 1 if labels[u] == labels[v] else 1
-
-                if nc > k:
-                    continue
-
-                nd = d + w
-
-                # Check whether an existing state dominates this one.
-                if any(dist[v][c] <= nd for c in range(1, nc + 1)):
-                    continue
-
-                # Remove states dominated by the new state.
-                for c in range(nc, k + 1):
-                    if dist[v][c] >= nd:
-                        dist[v][c] = float('inf')
-
-                dist[v][nc] = nd
-                heappush(pq, (nd, v, nc))
+                if nd <= k and nw < dist[nei][nd]:
+                    dist[nei][nd] = nw
+                    heappush(queue, (nw, nei, nd))
 
         return -1
