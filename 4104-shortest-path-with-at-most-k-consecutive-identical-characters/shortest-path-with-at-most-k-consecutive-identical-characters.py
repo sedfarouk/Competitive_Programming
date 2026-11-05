@@ -12,6 +12,8 @@ class Solution:
         while queue:
             w, q, d = heappop(queue)
 
+            if q == n - 1: return w
+
             for weight, nei in graph[q]:
                 nw = w + weight
                 nd = 1 if labels[q] != labels[nei] else (d + 1)
@@ -20,5 +22,4 @@ class Solution:
                     dist[nei][nd] = nw
                     heappush(queue, (nw, nei, nd))
 
-        mn = min(dist[-1])
-        return mn if mn != float("inf") else -1
+        return -1
