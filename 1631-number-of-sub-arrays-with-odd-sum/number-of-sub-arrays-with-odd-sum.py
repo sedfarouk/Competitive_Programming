@@ -5,7 +5,7 @@ class Solution:
         ans = curr = 0
 
         for x in arr:
-            curr += x
+            curr = (curr + x) % 2
             d[curr % 2] = (d[curr % 2] + 1) % MOD
             if curr % 2: ans = (ans + d[0]) % MOD  
             else: ans = (ans + d[1]) % MOD
